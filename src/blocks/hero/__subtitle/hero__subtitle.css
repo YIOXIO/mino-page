@@ -1,0 +1,9 @@
+.hero__subtitle{
+    color: #FFF;
+    font-size: clamp(2rem, 1.636rem + 1.818vw, 3rem);
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    max-inline-size: 675px;
+    margin-block-end: 44px;
+}

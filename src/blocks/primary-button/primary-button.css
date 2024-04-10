@@ -1,0 +1,29 @@
+
+.primary-button{
+    color: #FFF;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 8px;
+    background: #629BE4;
+    padding-inline: 40px;
+    padding-block: 16px;
+    border: none;
+    cursor: pointer;
+    background-size: 300% 100%;
+    background-color: #629BE4;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    transition: all .4s ease-in-out;
+
+}
+
+.primary-button:hover {
+    transition: all .4s ease-in-out;
+    background-position: 100% 0;
+    box-shadow: 0 4px 10px 0 hsla(214, 71%, 64%, .7);;
+}
+
+.primary-button:focus {
+    outline: none;
+}

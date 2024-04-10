@@ -1,6 +1,38 @@
-const numbers = [2, 3, 5];
+import './index.css'
 
-// Стрелочная функция. Не запнётся ли на ней Internet Explorer?
-const doubledNumbers = numbers.map(number => number * 2);
 
-console.log(doubledNumbers); // 4, 6, 10 
+
+
+
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
+
+const swiper = new Swiper('.sample-slider', {
+    loop: false,
+    grabCursor:true,
+    speed:350, 
+    slideShadows:true,
+    slidesPerView: 1,
+    centeredSlides : true,    
+    parallax: true,
+    effect: "cards",
+    creativeEffect: {
+        limitProgress: 4,
+        prev: {
+            translate: [-65, 0, -200],
+            rotate: [0, 0, 0],
+        },
+        next: {
+            translate: ['110%', 0, 0],
+            rotate: [0, 0, 0],
+        },
+    },
+    mousewheel: {
+      forceNiceScroll: true,
+      invert: false,
+    },
+  
+  })
+  
+
+  

@@ -1,0 +1,9 @@
+
+.hero__date{
+    color: #FFF;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;  
+    margin-block-end: 16px;
+}

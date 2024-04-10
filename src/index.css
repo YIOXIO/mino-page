@@ -1,0 +1,76 @@
+@import './vendor/normalize.css';
+@import './vendor/global.css';
+@import './vendor/fonts/fonts.css';
+@import './blocks/container/container.css';
+@import './blocks/header/header.css';
+@import './blocks/primary-button/primary-button.css';
+@import './blocks/hero/hero.css';
+@import './blocks/swiper/swiper.css';
+
+.root{
+    font-family: 'Golos', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+
+.hero{
+    margin-block-end: 160px;
+}
+
+.sample-slider{
+    max-inline-size: 600px;
+    border-radius: 34px;
+
+}
+
+
+.mission__container{
+    border-radius: 34px;
+    background:radial-gradient(149.16% 127.86% at 6% 83.83%, #136EB7 0%, #0E4A8F 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 90px;
+    padding-inline: 60px;
+}
+
+.mission__title{
+    color: #FFF;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    max-inline-size: 300px;
+}
+
+.mission__text{
+    color: #38424F;
+    font-size: 24px;
+    line-height: normal;
+}
+.span-accent{
+    font-weight: 700;
+}
+
+.mission__card{
+    background-color: #fff;
+    padding-inline: 40px;
+    padding-block: 40px;
+    border-radius: 34px;
+    block-size: 373px;
+    max-inline-size: 584px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+
+}
+
+.mission__icon{
+    inline-size: 100%;
+    max-inline-size: 60px;
+}
+

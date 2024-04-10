@@ -7,8 +7,120 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="root">
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <ul class="header__nav-list header__nav-list_grid">
+                    <li>
+                            <a class="header__nav-link" href="/">
+                                <img class="header__logo" src="<%=require('./img/icons/logo.svg')%>" alt="">
+                            </a>
+                    </li>
+                    <li>
+                        <a class="header__nav-link" href="/">
+                            <img class="header__logo" src="<%=require('./img/icons/mon-logo.svg')%>" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="header__nav-link header__nav-link_bold" href="/">Стратегическая <br> сессия</a>
+                    </li>
+                </ul>
+                <ul class="header__nav-list">
+                    <li>
 
+                        <a class="header__nav-link" href="/">
+                            <img class="header__logo" src="<%=require('./img/icons/search-icon.svg')%>" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="header__nav-link" href="/">О стратегической сессии</a>        
+                    </li>
+                    <li>
+                        <a class="header__nav-link" href="/">Программа</a>
+                    </li>
+                    <li>
+                        <a class="header__nav-link" href="/">Зарегистрироваться</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="mon-main">
+        <section class="hero">
+            <div class="container">
+                <article class="hero__container">
+                    <h1 class="hero__title">Стратегическое развитие университетов: </h1>
+                    <h2 class="hero__subtitle">трансформация финансовой модели
+                    </h2>
+                    <p class="hero__date">25-26 апреля</p>
+                    <p class="hero__info">НИУ ВШЭ, кампус на Шаболовке</p>
+                    <button class="primary-button">Зарегистрироваться</button>
+                </article>
+            </div>
+        </section>
+        <section class="mission">
+            <div class="container">            
+                    <div class="mission__container">
+                        <h2 class="mission__title">Задачи сессии</h2>
+                        <article class="sample-slider" >
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <article class="mission__card">
+                              
+                                        <p class="mission__text"> <span class="span-accent">Выработка единого представления</span>  о трансформации финансовой модели университета в рамках реализации стратегии развития
+                                        </p>
+                                        <img class="mission__icon" src="<%=require('./img/icons/cards-icon/icon1.svg')%>" alt="">
+                                    </article>
+                                
+                                </li>                    
+                                <li class="swiper-slide">
+                                    <article class="mission__card">
+                                      
+                                        <p class="mission__text"> <span class="span-accent">Оценка текущей и проектирование целевой системы управления</span>  ключевыми факторами, которые влияют на финансовую модель: создание ценности и портфель продуктов, продажи, инвестиции и ресурсы
+                                        </p>
+                                        <img class="mission__icon" src="<%=require('./img/icons/cards-icon/icon2.svg')%>" alt="">
+                                    </article>
+                                
+                                </li>                    
+                                <li class="swiper-slide">
+                                    <article class="mission__card">
+                                     
+                                        <p class="mission__text"><span class="span-accent">Субъективизация актуальных инструментов стратегического и финансового менеджмента</span>, преодоление индивидуальных и командных барьеров использования передовых корпоративных практик управления
+                                        </p>
+                                        <img class="mission__icon" src="<%=require('./img/icons/cards-icon/icon3.svg')%>" alt="">
+                                    </article>
+                                
+                                </li>                    
+                                <li class="swiper-slide">
+                                    <article class="mission__card">
+                                    
+                                        <p class="mission__text"><span class="span-accent">Выявление барьеров и проблем применения</span> передовых корпоративных практик на уровне университетов и системы высшего образования в целом
+                                        </p>
+                                        <img class="mission__icon" src="<%=require('./img/icons/cards-icon/icon4.svg')%>" alt="">
+                                    </article>                                
+                                </li>                    
+                                <li class="swiper-slide">
+                                    <article class="mission__card">
+                                      
+                                        <p class="mission__text"><span class="span-accent">Выработка комплекса мер по снятию барьеров</span> и решению выявленных проблем, в том числе предложения по трансформации регуляторных механизмов в системе высшего образования
+                                        </p>
+                                        <img class="mission__icon" src="<%=require('./img/icons/cards-icon/icon5.svg')%>" alt="">
+                                    </article>                                
+                                </li>                    
+                                <li class="swiper-slide">
+                                    <article class="mission__card">                                      
+                                        <p class="mission__text"><span class="span-accent">Формирование управленческой команды</span> с вовлечением внешних стейкхолдеров для реализации стратегии развития
+                                        </p>
+                                        <img class="mission__icon" src="<%=require('./img/icons/cards-icon/icon5.svg')%>" alt="">
+                                    </article>                                
+                                </li>                    
+                            </ul>
+                        </article>
+                    </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

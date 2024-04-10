@@ -1,0 +1,15 @@
+.swiper-3d .swiper-slide-shadow{
+    border-radius: 34px;
+}
+
+.swiper-3d .swiper-slide-shadow-right{
+    border-radius: 34px;
+}
+.swiper-3d .swiper-slide-shadow-left{
+    border-radius: 34px;
+}
+
+.swiper-creative .swiper-slide{
+    box-shadow: 0 0 10px black;
+    border-radius: 34px;
+}
