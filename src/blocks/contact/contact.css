@@ -1,0 +1,11 @@
+@import './__address/contact__address.css';
+@import './__container/contact__container.css';
+@import './__header/contact__header.css';
+@import './__icon/contact__icon.css';
+@import './__list/contact__list.css';
+@import './__wrapper/contact__wrapper.css';
+
+.contact{
+    margin-block-end: 100px;
+}
+

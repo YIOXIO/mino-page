@@ -1,0 +1,6 @@
+.footer__logo{
+    inline-size: 65px;
+}
+.footer__nav-list:nth-child(2)  .footer__logo{
+    inline-size: 25px;
+}

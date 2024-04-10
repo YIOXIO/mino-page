@@ -1,0 +1,11 @@
+.audience__card{
+    padding-inline: 20px 40px;
+    padding-block: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 24px;
+    background-color: #FFF;
+    block-size: 100%;
+}

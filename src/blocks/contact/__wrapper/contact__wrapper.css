@@ -1,0 +1,20 @@
+.contact__wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.contact__wrapper>.section-title{
+    margin-block-end: 52px;
+}
+
+.contact__wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.contact__wrapper>.section-title{
+    margin-block-end: 52px;
+}
+

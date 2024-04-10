@@ -1,0 +1,8 @@
+.contact__icon{
+    background-color:#D0E2F1 ;
+    border-radius: 12px;
+    padding-block: 10px;
+    padding-inline: 10px;
+    max-inline-size: 44px;
+    inline-size: 100%;
+}

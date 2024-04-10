@@ -1,0 +1,11 @@
+.audience__number{
+    border-radius: 12px;
+    background-color: #D0E2F1;
+    padding-block: 10px;
+    padding-inline: 10px;
+    color: #1571BA;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+}
+

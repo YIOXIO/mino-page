@@ -161,7 +161,53 @@
                         </article>
                     </div>
         </section>
+        <section class="contact">
+            <div class="container">
+                <article class="contact__container">
+                    <article class="contact__wrapper">
+                        <h2 class="section-title">Как добраться?</h2>
+                        <ul class="contact__list">
+                            <li>
+                                <p class="contact__header">Площадка</p>
+                                <address class="contact__address"> <img class="contact__icon" src="<%=require('./img/icons/home-icon.svg')%>" alt="">НИУ ВШЭ, кампус на Покровке</address>
+                            </li>
+                            <li>
+                                <p class="contact__header">Адрес</p>
+                                <address class="contact__address"> <img class="contact__icon" src="<%=require('./img/icons/pointer-icon.svg')%>" alt="">г. Москва, Покровский бульвар, д. 11, стр. 6, подъезд 4</address>
+                            </li>
+                        </ul>
+                    </article>
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac8dd2571680dad8f7ca8ee9e57f265a362f56fed963fdfcc3014111b0684da29&amp;source=constructor" width="687" height="435" frameborder="0"></iframe>
+
+                </article>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li>
+                        <a class="footer__nav-link" href="/">
+                            <img class="footer__logo" src="<%=require('./img/icons/logo.svg')%>" alt="">
+                        </a>
+                </li>
+                <li>
+                    <a class="footer__nav-link" href="/">
+                        <img class="footer__logo" src="<%=require('./img/icons/mon-logo_footer.svg')%>" alt="">
+                    </a>
+                    <a class="footer__nav-link footer__nav-link_bold" href="/">Стратегическая <br> сессия</a>
+                </li>
+                </ul>
+            </nav>
+            <article class="footer__wrapper">
+                <p class="footer__text">МОСКВА 25 - 26.04.2024</p>
+                <a class="footer__link" href="/">
+                    <img class="footer__icon"  src="<%=require('./img/icons/telegram-icon.svg')%>" alt="">
+                </a>
+            </article>
+        </div>  
+    </footer>
 </body>
 
 </html>

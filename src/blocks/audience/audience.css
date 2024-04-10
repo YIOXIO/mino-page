@@ -1,0 +1,10 @@
+@import './__card/audience__card.css';
+@import './__info/audience__info.css';
+@import './__list/audience__list.css';
+@import './__number/audience__number.css';
+@import './__quote/audience__quote.css';
+
+.audience{
+    margin-block-end: 160px;
+}
+

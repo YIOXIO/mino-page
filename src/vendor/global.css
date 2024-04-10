@@ -8,6 +8,7 @@ body {
   min-inline-size: 375px;
   margin:0;
   box-sizing: border-box;
+  font-family: 'Golos';
 }
 
 h1,

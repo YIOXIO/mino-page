@@ -1,0 +1,14 @@
+.footer__nav-list{
+    display: flex;
+    border-block-end: 1px rgba(255, 255, 255, 0.20) solid;
+    padding-block-end: 50px;
+    gap: 20px;
+    margin-block-end: 50px;
+
+}
+
+.footer__nav-list>li{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}

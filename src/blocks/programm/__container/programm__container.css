@@ -1,0 +1,9 @@
+.programm__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
+    max-inline-size: 1200px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}

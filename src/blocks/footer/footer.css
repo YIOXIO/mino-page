@@ -1,0 +1,11 @@
+@import './__logo/footer__logo.css';
+@import './__nav-link/footer__nav-link.css';
+@import './__nav-list/footer__nav-list.css';
+@import './__wrapper/footer__wrapper.css';
+@import './__text/footer__text.css';
+
+.footer{
+    background-image: radial-gradient(149.16% 127.86% at 6% 83.83%, #136EB7 0%, #0E4A8F 100%);
+    min-block-size: 321px;
+    padding-block: 81.31px 61px;
+}

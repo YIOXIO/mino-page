@@ -1,0 +1,8 @@
+@import './__container/programm__container.css';
+@import './__button/programm__button.css';
+
+.programm{
+    background-color: #fff;
+    margin-block-end: 160px;
+    padding-block: 75px;
+}
