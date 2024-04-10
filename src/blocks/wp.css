@@ -1,0 +1,142 @@
+.popup{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.popup_is_animated{
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    transition: visibility 0s 0.6s, opacity 0.6s;
+
+}
+.popup_is_active{
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+    transition: visibility 0s, opacity 0.6s;
+    padding-inline: 2.5vw;
+}
+
+.popup__content{
+    position: relative;
+    flex-grow: 1;
+	max-inline-size:1200px;
+}
+
+.popup__close {
+    inline-size: 25px;
+    block-size: 25px;
+    /* background: transparent url('../../../img/close.svg') center no-repeat; */
+    background-size: 25px 25px;
+    border: none;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transition: visibility 0s, opacity 0.3s;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+  }
+  
+  .popup__close:hover {
+    opacity: 0.6;
+  }
+
+.policy{
+	color: #636972;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14px;
+}
+.policy__link{
+	text-decoration:underline;
+	display:flex;
+	align-items:center;
+	gap:8px;
+}
+.form__wrapper{
+	display: flex;
+    margin-block-end: 80px;
+    flex-direction: column;
+}
+
+.form__wrapper_jsce{
+	    justify-content: flex-end;
+	    margin-block-end: 40px;	
+		flex-direction:row;
+	align-items:center;
+}
+
+.wpcf7-form-control.wpcf7-file {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+	margin-top: 8px;
+}
+.file-text{
+	opacity: 0.5;
+color: #5B5D64;
+font-family: Golos;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 145%;
+	max-inline-size:260px;
+}
+.form__wrapper-content{
+    display: flex;
+    align-items: center;
+	gap:40px;
+}
+/* Стили для кнопки выбора файла */
+.wpcf7-form-control.wpcf7-file::-webkit-file-upload-button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.wpcf7-form-control.wpcf7-file::-webkit-file-upload-button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для текста, отображаемого в поле файла */
+.wpcf7-form-control.wpcf7-file::-webkit-file-upload-button::before {
+    content: 'Выберите файл';
+}
+
+.cf7-notification {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.cf7-notification.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.wpcf7-list-item-label{
+	display:none;
+}

@@ -32,7 +32,7 @@
         url('GolosText-Bold.woff2') format('woff2'),
         url('GolosText-Bold.woff') format('woff'),
         url('GolosText-Bold.ttf') format('truetype');
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -44,7 +44,7 @@
         url('GolosText-Regular.woff2') format('woff2'),
         url('GolosText-Regular.woff') format('woff'),
         url('GolosText-Regular.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 }
 

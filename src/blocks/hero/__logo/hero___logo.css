@@ -1,0 +1,7 @@
+.hero__logo{
+    max-inline-size: 200px;
+}
+
+.hero__list li:nth-child(2) .hero__logo{
+    max-inline-size: 164px;
+}

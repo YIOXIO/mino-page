@@ -15,6 +15,7 @@
     background-color: #629BE4;
     background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
     transition: all .4s ease-in-out;
+    text-decoration:none;
 
 }
 

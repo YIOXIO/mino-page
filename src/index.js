@@ -15,7 +15,8 @@ const swiper = new Swiper('.sample-slider', {
     slidesPerView: 1,
     centeredSlides : true,    
     parallax: true,
-    effect: "cards",
+    width: 600,
+    effect: "creative",
     creativeEffect: {
         limitProgress: 4,
         prev: {
@@ -27,12 +28,20 @@ const swiper = new Swiper('.sample-slider', {
             rotate: [0, 0, 0],
         },
     },
+    breakpoints:{
+        320:{
+            width:300,
+        },
+        768:{
+            width: 400,
+        },
+        1024:{
+            width: 600,
+        },
+    },
     mousewheel: {
       forceNiceScroll: true,
       invert: false,
     },
   
   })
-  
-
-  

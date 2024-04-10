@@ -1,0 +1,27 @@
+@import './__list/form__list.css';
+@import './__list/_long/form__list_long.css';
+@import './__label/form__label.css';
+@import './__input/form__input.css';
+@import './__header/form__header.css';
+
+
+.form{
+    background-color: #FFF;
+    max-inline-size: 1200px;
+    border-radius: 4px;
+    padding-inline: 2.5vw;
+    padding-block: 65px;
+    margin-inline: auto;
+    position: relative;
+    max-block-size: clamp(48rem, 45.6rem + 12vw, 60rem);
+    overflow-y: scroll;
+    border-radius: 34px;
+    box-shadow: 0 0 15px black;
+}
+
+@media (width >=1024px){
+    .form{
+        padding-inline: 40px;
+        overflow-y: inherit;
+    }
+}

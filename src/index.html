@@ -28,12 +28,6 @@
                 </ul>
                 <ul class="header__nav-list">
                     <li>
-
-                        <a class="header__nav-link" href="/">
-                            <img class="header__logo" src="<%=require('./img/icons/search-icon.svg')%>" alt="">
-                        </a>
-                    </li>
-                    <li>
                         <a class="header__nav-link" href="/">О стратегической сессии</a>        
                     </li>
                     <li>
@@ -55,12 +49,62 @@
                     </h2>
                     <p class="hero__date">25-26 апреля</p>
                     <p class="hero__info">НИУ ВШЭ, кампус на Шаболовке</p>
-                    <button class="primary-button">Зарегистрироваться</button>
+                    <button class="primary-button hero__button">Зарегистрироваться</button>
+                    <article class="hero__wrapper">
+                        <ul class="hero__list">
+                            <li>
+                                <img class="hero__logo" src="<%=require('./img/icons/minobr.svg')%>" alt="">
+                                <h3 class="hero__list-header">Организатор: Минобрнауки России</h3>
+                            </li>
+                            <li>
+                                <img class="hero__logo" src="<%=require('./img/icons/reu-logo.svg')%>" alt="">
+                                <h3 class="hero__list-header">Оператор: РЭУ им. Г.В. Плеханова</h3>
+                            </li>
+                        </ul>
+                    </article>
                 </article>
             </div>
         </section>
-        <section class="mission">
-            <div class="container">            
+        <section class="programm">
+            <div class="container programm__container">
+                <h2 class="section-title">Программа мероприятий</h2>
+                <a class="primary-button programm__button" href="/">подробнее</a>
+            </div>
+        </section>
+        <section class="audience">
+            <div class="container">
+                <h2 class="section-title">Целевая аудитория</h2>
+                <p class="audience__quote">До 460 человек</p>
+                <ul class="audience__list">
+                    <li>
+                        <article class="audience__card">
+                            <p class="audience__number">01</p>
+                            <p class="audience__info">Ректоры вузов</p>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="audience__card">
+                            <p class="audience__number">02</p>
+                            <p class="audience__info">Проректоры, курирующие финансовые блоки, финансовые директоры вузов</p>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="audience__card">
+                            <p class="audience__number">03</p>
+                            <p class="audience__info">Руководители стратегических служб</p>
+                        </article>
+                    </li>
+     
+                    <li>
+                        <article class="audience__card">
+                            <p class="audience__number">04</p>
+                            <p class="audience__info">Представилели органов власти</p>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="mission">        
                     <div class="mission__container">
                         <h2 class="mission__title">Задачи сессии</h2>
                         <article class="sample-slider" >
@@ -70,7 +114,7 @@
                               
                                         <p class="mission__text"> <span class="span-accent">Выработка единого представления</span>  о трансформации финансовой модели университета в рамках реализации стратегии развития
                                         </p>
-                                        <img class="mission__icon" src="<%=require('./img/icons/cards-icon/icon1.svg')%>" alt="">
+
                                     </article>
                                 
                                 </li>                    
@@ -79,7 +123,7 @@
                                       
                                         <p class="mission__text"> <span class="span-accent">Оценка текущей и проектирование целевой системы управления</span>  ключевыми факторами, которые влияют на финансовую модель: создание ценности и портфель продуктов, продажи, инвестиции и ресурсы
                                         </p>
-                                        <img class="mission__icon" src="<%=require('./img/icons/cards-icon/icon2.svg')%>" alt="">
+
                                     </article>
                                 
                                 </li>                    
@@ -88,7 +132,7 @@
                                      
                                         <p class="mission__text"><span class="span-accent">Субъективизация актуальных инструментов стратегического и финансового менеджмента</span>, преодоление индивидуальных и командных барьеров использования передовых корпоративных практик управления
                                         </p>
-                                        <img class="mission__icon" src="<%=require('./img/icons/cards-icon/icon3.svg')%>" alt="">
+
                                     </article>
                                 
                                 </li>                    
@@ -97,7 +141,7 @@
                                     
                                         <p class="mission__text"><span class="span-accent">Выявление барьеров и проблем применения</span> передовых корпоративных практик на уровне университетов и системы высшего образования в целом
                                         </p>
-                                        <img class="mission__icon" src="<%=require('./img/icons/cards-icon/icon4.svg')%>" alt="">
+
                                     </article>                                
                                 </li>                    
                                 <li class="swiper-slide">
@@ -105,20 +149,17 @@
                                       
                                         <p class="mission__text"><span class="span-accent">Выработка комплекса мер по снятию барьеров</span> и решению выявленных проблем, в том числе предложения по трансформации регуляторных механизмов в системе высшего образования
                                         </p>
-                                        <img class="mission__icon" src="<%=require('./img/icons/cards-icon/icon5.svg')%>" alt="">
                                     </article>                                
                                 </li>                    
                                 <li class="swiper-slide">
                                     <article class="mission__card">                                      
                                         <p class="mission__text"><span class="span-accent">Формирование управленческой команды</span> с вовлечением внешних стейкхолдеров для реализации стратегии развития
                                         </p>
-                                        <img class="mission__icon" src="<%=require('./img/icons/cards-icon/icon5.svg')%>" alt="">
                                     </article>                                
                                 </li>                    
                             </ul>
                         </article>
                     </div>
-            </div>
         </section>
     </main>
 </body>

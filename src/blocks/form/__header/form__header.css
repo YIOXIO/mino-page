@@ -1,0 +1,10 @@
+
+.form__header{
+    color: #28337C;
+    font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-block-end: 51px;
+}
