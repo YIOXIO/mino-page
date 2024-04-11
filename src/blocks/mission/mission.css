@@ -3,3 +3,10 @@
 @import './__icon/mission__icon.css';
 @import './__text/mission__text.css';
 @import './__title/mission__title.css';
+
+.mission{
+    background: radial-gradient(149.16% 127.86% at 6% 83.83%, #136eb7 0, #0e4a8f 100%);
+    overflow: hidden;
+    margin-block-end: 160px;
+
+}

@@ -1,5 +1,9 @@
 .header__nav-link_bold{
     color: #28337C;
-    font-weight: 600;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
     text-transform: uppercase;
+    text-decoration: none;
 }

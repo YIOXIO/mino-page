@@ -1,12 +1,13 @@
 .mission__container{
     align-items: center;
-    background: radial-gradient(149.16% 127.86% at 6% 83.83%, #136eb7 0, #0e4a8f 100%);
     display: flex;
-    justify-content: center;
     padding-block: 90px;
-    padding-inline: 2.5vw;
     flex-wrap: wrap;
-    overflow: hidden;
     row-gap: 20px;
-    margin-block-end: 160px;
+    justify-content: center;
+}
+@media (width >=1220px){
+    .mission__container{
+        justify-content: inherit;
+    }
 }

@@ -1,5 +1,5 @@
 .header__nav-list_grid{
-    display: grid;
-    grid-template-columns: .6fr .46fr .4fr;
-    gap: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }

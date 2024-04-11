@@ -12,8 +12,13 @@
 .swiper-creative .swiper-slide{
     box-shadow: 0 0 10px black;
     border-radius: 34px;
-}.sample-slider{
+}
+.sample-slider{
     max-inline-size: 600px;
     border-radius: 34px;
+}
 
+.speakers .swiper-creative .swiper-slide{
+    box-shadow: none;
+    border-radius: inherit;
 }

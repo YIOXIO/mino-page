@@ -1,6 +1,7 @@
 @import './vendor/normalize.css';
 @import './vendor/global.css';
 @import './vendor/fonts/fonts.css';
+@import './vendor/fonts/geometria/index.css';
 @import './blocks/container/container.css';
 @import './blocks/header/header.css';
 @import './blocks/primary-button/primary-button.css';
@@ -13,9 +14,10 @@
 @import './blocks/audience/audience.css';
 @import './blocks/contact/contact.css';
 @import './blocks/footer/footer.css';
+@import './blocks/conception/coneption.css';
 
 .root{
-    font-family: "Golos Text", sans-serif;;
+    font-family: "Geometria", sans-serif;;
     font-weight: normal;
     font-style: normal;
     background-color: #F4F4F4;
@@ -34,3 +36,173 @@
 }
 
 
+
+.speakers{
+    overflow: hidden;
+}
+.speakers__slider{
+    margin-block-start: 60px;
+}
+.speakers__list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(585px,1fr));
+    gap: 30px;
+    background-color: #F4F4F4;
+}
+
+.speakers__card{
+    display: flex;
+    gap: 20px;    
+    padding-block: 26px 32px;
+    padding-inline: 26px 23px;
+    background-color: #fff;
+    border-radius: 16px;
+    max-inline-size: 585px;
+}
+
+.speakers__img{
+    block-size: 150px;
+    max-inline-size: 123px;
+    inline-size: 100%   ;
+    border-radius: 16px;
+    background-color: #D0E2F1;
+    object-fit: cover;
+    transform: scale(1.06); /*Не забыть убрать*/
+}
+
+.speakers__name{
+    color: #38424F;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    margin-block-end: 12px;
+}
+
+.speakers__duty{
+    color: #38424F;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    margin-block-end: 8px;
+}
+.speakers__theme{
+    color: #38424F;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.speakers{margin-block-end: 160px;}
+
+
+/* Стили для страницы расписания */
+.timetable{
+    margin-block: 120px;
+}
+.timetable__wrapper{
+    margin-block-end: 80px;
+}
+.timetable__title{
+    border-bottom: 2px solid #E5E5E5;
+    padding-block-end: 60px;
+    margin-block-end: 60px;
+}
+
+.timetable__subtitle{
+    color: #38424F;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    margin-block-end: 10px;
+}
+
+.timetable__list{
+    margin-block-end: 60px;
+}
+.timetable__list li{
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.timetable__list li::before{
+    content: '';
+    display: block;
+    max-inline-size: 8px;
+    inline-size: 100%;
+    block-size: 8px;
+    background-color: #38424F;
+}
+
+.timetable__info{
+    color: #38424F;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: normal;
+}
+
+
+.timetable__date{
+    color: #28337C;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-block-end: 20px;
+}
+
+.timetable__schedule li:not(:first-child) {
+    border-top: 2px solid #E5E5E5;
+}
+
+.timetable__schedule-list{
+    display: flex;
+    gap: 30px;
+    padding-block: 30px;
+    flex-wrap: wrap;
+}
+
+.timetable__schedule-time{
+    color: #38424F;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    max-inline-size: 278px;
+    inline-size: 100%;
+}
+.timetable__schedule-header{
+    color: #38424F;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.timetable__schedule-description{
+    color: #38424F;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.timetable__schedule-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.timetable__schedule-description-mbe{
+    margin-block-end: 25px;
+}
+
+.timetable__button{
+    padding-inline: 20px;
+}
+@media (width >= 768px){
+    .timetable__schedule-list{
+        flex-wrap: nowrap;
+    }
+    
+}

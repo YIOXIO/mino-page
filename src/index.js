@@ -30,10 +30,7 @@ const swiper = new Swiper('.sample-slider', {
     },
     breakpoints:{
         320:{
-            width:300,
-        },
-        768:{
-            width: 400,
+            width:400,
         },
         1024:{
             width: 600,
@@ -45,3 +42,32 @@ const swiper = new Swiper('.sample-slider', {
     },
   
   })
+
+  const speakers = new Swiper('.speakers__slider', {
+    loop: false,
+    grabCursor:true,
+    speed:350, 
+    slideShadows:true,
+    slidesPerView: 1,
+    centeredSlides : true,    
+    parallax: true,
+    pagination:true,
+    spaceBetween: 30,
+    effect: "creative",
+    creativeEffect: {
+        limitProgress: 4,
+        prev: {
+            translate: [-65, 0, -200],
+            rotate: [0, 0, 0],
+        },
+        next: {
+            translate: ['102.7%', 0, 0],
+            rotate: [0, 0, 0],
+        },
+        
+    },
+    
+  })
+
+
+

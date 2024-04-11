@@ -1,0 +1,7 @@
+@import './__card/conception__card.css';
+@import './__list/conception__list.css';
+@import './__title/conception__title.css';
+@import './__info/conception__info.css';
+.conception{
+    margin-block-end: 160px;
+}
