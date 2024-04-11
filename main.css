@@ -44,7 +44,7 @@
 .audience__quote{color:#38424f;font-size:24px;font-weight:500;line-height:normal;margin-block:8px 60px;text-transform:uppercase}
 .audience{-webkit-margin-after:160px;margin-block-end:160px}
 .contact__address{-webkit-margin-after:44px;align-items:center;color:#38424f;display:flex;font-size:24px;font-style:normal;font-weight:700;gap:12px;line-height:normal;margin-block-end:44px;max-inline-size:457px}
-.contact__container{display:flex;justify-content:space-between}
+.contact__container{display:flex;flex-wrap:wrap;justify-content:space-between}
 .contact__header{-webkit-margin-after:20px;color:#38424f;font-size:18px;font-weight:400;line-height:normal;margin-block-end:20px}
 .contact__icon{background-color:#d0e2f1;border-radius:12px;inline-size:100%;max-inline-size:44px;padding-block:10px;padding-inline:10px}
 .contact__list{display:flex;flex-direction:column}
