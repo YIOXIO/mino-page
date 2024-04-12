@@ -1,7 +1,6 @@
 @import './vendor/normalize.css';
 @import './vendor/global.css';
 @import './vendor/fonts/fonts.css';
-@import './vendor/fonts/geometria/index.css';
 @import './blocks/container/container.css';
 @import './blocks/header/header.css';
 @import './blocks/primary-button/primary-button.css';
