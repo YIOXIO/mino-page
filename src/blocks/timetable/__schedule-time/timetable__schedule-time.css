@@ -1,0 +1,9 @@
+.timetable__schedule-time{
+    color: #38424F;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    max-inline-size: 278px;
+    inline-size: 100%;
+}

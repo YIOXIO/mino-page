@@ -3,5 +3,6 @@
 @import './__title/conception__title.css';
 @import './__info/conception__info.css';
 .conception{
-    margin-block-end: 160px;
+    background-color: #F4F4F4;
+    padding-block: 100px;
 }

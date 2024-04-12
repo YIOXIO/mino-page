@@ -1,6 +1,6 @@
 .header__nav-link_bold{
     color: #28337C;
-    font-size: 16px;
+    font-size: clamp(0.688rem, 0.574rem + 0.568vw, 1rem);
     font-style: normal;
     font-weight: 700;
     line-height: 17px;

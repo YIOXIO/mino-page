@@ -1,6 +1,6 @@
 .header__logo{
-    inline-size: 65px;
+    inline-size: clamp(2.188rem, 1.506rem + 3.409vw, 4.063rem);
 }
 .header__nav-list:nth-child(2)  .header__logo{
-    inline-size: 25px;
+    inline-size: clamp(2.188rem, 1.506rem + 3.409vw, 4.063rem);
 }

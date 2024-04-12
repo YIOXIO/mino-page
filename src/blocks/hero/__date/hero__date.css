@@ -1,9 +1,31 @@
 
 .hero__date{
-    color: #FFF;
-    font-size: 36px;
-    font-weight: 400;
+    color: #475DA7;
+    font-size: 48px;
+    font-weight: 700;
     line-height: normal;
-    text-transform: uppercase;  
-    margin-block-end: 16px;
+    margin-block-end: 8px;
+
+}
+
+.hero__date_span{
+    font-size: 24px;
+
+}
+
+
+@media (width >= 820px){
+.hero__date{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-inline-size: 222px;
+    align-items: flex-end;
+    text-transform: uppercase;
+    justify-content: center;
+    margin-inline-start: -37px;
+}
+.hero__date_span{
+    margin-block: -10px 8px;
+}
 }

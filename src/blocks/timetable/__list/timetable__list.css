@@ -1,0 +1,19 @@
+.timetable__list{
+    margin-block-end: 60px;
+}
+.timetable__list li{
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.timetable__list li::before{
+    content: '';
+    display: block;
+    max-inline-size: 8px;
+    inline-size: 100%;
+    block-size: 8px;
+    background-color: #38424F;
+}
+

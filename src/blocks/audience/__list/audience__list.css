@@ -1,7 +1,9 @@
 .audience__list{
     display: grid;
-    grid-template-columns:repeat(auto-fit,minmax(clamp(12.5rem,3.75rem + 43.75vw,30.163rem),1fr));
     gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(12.5rem, 3.75rem + 43.75vw, 30.163rem), 1fr));
+    row-gap: 10px;
+    margin-block-end: 45px;
 }
 
 @media (width >= 1220px){

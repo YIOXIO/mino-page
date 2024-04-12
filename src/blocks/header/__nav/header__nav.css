@@ -1,6 +1,16 @@
 .header__nav{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding-block: 16px;
+    position: fixed;
+    inline-size: 100%;
+    background: #fff;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    padding-inline: 2.5vw;
+}
+
+@media (width >=1220px){
+    .header__nav{
+        padding-inline:0;
+    }
 }

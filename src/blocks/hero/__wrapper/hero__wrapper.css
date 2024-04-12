@@ -1,0 +1,6 @@
+.hero__wrapper{
+    display: flex;
+    gap: 17px;
+    flex-wrap: wrap;
+    margin-block-end: 79px;
+}

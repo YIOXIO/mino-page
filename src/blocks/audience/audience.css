@@ -3,8 +3,9 @@
 @import './__list/audience__list.css';
 @import './__number/audience__number.css';
 @import './__quote/audience__quote.css';
+@import './__title/audience__title.css';
 
 .audience{
-    margin-block-end: 160px;
+    margin-block-end: 99px;
 }
 

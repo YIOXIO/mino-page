@@ -7,34 +7,46 @@
     <header class="header">
         <div class="container">
             <nav class="header__nav">
-                <ul class="header__nav-list header__nav-list_grid">
-                    <li>
+                <article class="header__container">
+                    <ul class="header__nav-list header__nav-list_grid">
+                        <li>
+                                <a class="header__nav-link" href="/">
+                                    <img class="header__logo" src="<%=require('./img/icons/logo.svg')%>" alt="">
+                                </a>
+                        </li>
+                        <li>
                             <a class="header__nav-link" href="/">
-                                <img class="header__logo" src="<%=require('./img/icons/logo.svg')%>" alt="">
+                                <img class="header__logo" src="<%=require('./img/icons/mon-logo.svg')%>" alt="">
                             </a>
-                    </li>
-                    <li>
-                        <a class="header__nav-link" href="/">
-                            <img class="header__logo" src="<%=require('./img/icons/mon-logo.svg')%>" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a class="header__nav-link_bold" href="/">Совещания-семинары <br> в формате <br> стратегической сессии</a>
-                    </li>
-                </ul>
-                <ul class="header__nav-list">
-                    <li>
-                        <a class="header__nav-link" href="/">О стратегической сессии</a>        
-                    </li>
-                    <li>
-                        <a class="header__nav-link" href="/">Программа</a>
-                    </li>
-                    <li>
-                        <a class="header__nav-link" href="/">Зарегистрироваться</a>
-                    </li>
-                </ul>
+                        </li>
+                        <li>
+                            <a class="header__nav-link_bold" href="/">Семинары-совещания <br> в формате стратегической<br> сессии</a>
+                        </li>
+                    </ul>
+                    <div class="burger-menu">
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
+                      </div>
+                      
+                    <ul class="header__nav-list side-navbar">
+                        <li>
+                            <a class="header__nav-link" href="/">О стратегической сессии</a>        
+                        </li>
+                        <li>
+                            <a class="header__nav-link"  href="#programm-section">Программа</a>
+                        </li>
+                        <li>
+                            <a class="header__nav-link" href="#contact-section">Контакты</a>
+                        </li>
+                        <li>
+                            <a class="primary-button header__nav-link" href="/">Зарегистрироваться</a>
+                        </li>
+                    </ul>
+                </article>
             </nav>
         </div>
+
     </header>
 
     <main class="mon-main">
@@ -157,7 +169,6 @@
         </section>
     </main>
 
-
     <footer class="footer">
         <div class="container">
             <nav class="footer__nav">
@@ -171,15 +182,12 @@
                     <a class="footer__nav-link" href="/">
                         <img class="footer__logo" src="<%=require('./img/icons/mon-logo_footer.svg')%>" alt="">
                     </a>
-                    <a class="footer__nav-link footer__nav-link_bold" href="/">Стратегическая <br> сессия</a>
+                    <a class="footer__nav-link footer__nav-link_bold" href="/">Семинары-совещания <br> в формате стратегической<br> сессии</a>
                 </li>
                 </ul>
             </nav>
             <article class="footer__wrapper">
                 <p class="footer__text">МОСКВА 25 - 26.04.2024</p>
-                <a class="footer__link" href="/">
-                    <img class="footer__icon"  src="<%=require('./img/icons/telegram-icon.svg')%>" alt="">
-                </a>
             </article>
         </div>  
     </footer>

@@ -1,0 +1,16 @@
+@import './__card/speakers__card.css';
+@import './__duty/speakers__duty.css';
+@import './__img/speakers__img.css';
+@import './__name/speakers__name.css';
+@import './__slider/speakers__slider.css';
+@import './__theme/speakers__theme.css';
+@import './__wrapper/speakers__wrapper.css';
+@import './__img-wrapper/speakers__img-wrapper.css';
+
+
+
+.speakers{
+    overflow: hidden;
+    margin-block-end: 100px;
+    padding-block: 100px;
+}

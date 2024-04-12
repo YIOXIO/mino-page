@@ -1,0 +1,45 @@
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    50%{
+        transform: translateX(150px);
+
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceColor {
+    0% {
+        box-shadow: 0 4px 10px 0 hsla(214, 71%, 64%, .7);
+
+    
+    }
+    50%{
+        box-shadow: 0 8px 30px 0 hsla(214, 71%, 64%, .7);
+
+    }
+    100%
+    {
+        background-position: 100% 0;
+        box-shadow: 0 4px 10px 0 hsla(214, 71%, 64%, .7);
+
+    }
+}
+

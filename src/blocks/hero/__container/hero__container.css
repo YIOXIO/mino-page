@@ -1,8 +1,4 @@
 .hero__container{
-    background-image: url('../../../img/bg-hero.png');
-    background-position: center;
-    background-size: cover;
     border-radius: 34px;
-    padding-block: 60px;
-    padding-inline: clamp(1.25rem, 0.341rem + 4.545vw, 3.75rem);
+    padding-block: 75px;
 }

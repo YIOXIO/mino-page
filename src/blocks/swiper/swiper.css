@@ -10,7 +10,6 @@
 }
 
 .swiper-creative .swiper-slide{
-    box-shadow: 0 0 10px black;
     border-radius: 34px;
 }
 .sample-slider{
@@ -22,3 +21,4 @@
     box-shadow: none;
     border-radius: inherit;
 }
+

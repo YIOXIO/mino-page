@@ -1,0 +1,17 @@
+@import './__button/timetable__button.css';
+@import './__date/timetable__date.css';
+@import './__info/timetable__info.css';
+@import './__list/timetable__list.css';
+@import './__schedule-description/timetable__schedule-description.css';
+@import './__schedule-header/timetable__schedule-header.css';
+@import './__schedule-list/timetable__schedule-list.css';
+@import './__schedule-time/timetable__schedule-time.css';
+@import './__schedule-wrapper/timetable__schedule-wrapper.css';
+@import './__schedule/timetable__schedule.css';
+@import './__subtitle/timetable__subtitle.css';
+@import './__title/timetable__title.css';
+@import './__wrapper/timetable__wrapper.css';
+
+.timetable{
+    margin-block: 120px;
+}

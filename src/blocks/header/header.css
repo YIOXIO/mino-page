@@ -4,7 +4,10 @@
 @import './__nav-link/_bold/headaer__nav-link_bold.css';
 @import './__nav-link/header__nav-link.css';
 @import './__logo/header__logo.css';
+@import './__container/header__container.css';
 
 .header{
-    margin-block-end: 51px;
+    margin-block-end: 60px;
+    position: relative;
+    min-block-size: 100px;
 }

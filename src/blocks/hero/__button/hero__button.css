@@ -1,8 +1,4 @@
 .hero__button{
-    color: #126BB4;
-    background-image: linear-gradient(to right, #ffffff, #ffffff, #04befe, #3f86ed);
-}
-
-.hero__button:hover{
     color: #fff;
+    background-image: linear-gradient(to right, #475DA7, #475DA7, #04befe, #3f86ed);
 }

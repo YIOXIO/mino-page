@@ -1,0 +1,12 @@
+
+.primary-button_fixed{
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    animation: fadeIn 1s ease-in-out forwards, bounceColor 6.5s linear alternate infinite;
+    
+}
+
+

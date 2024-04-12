@@ -7,7 +7,18 @@
 @import './__list-header/hero__list-header..css';
 @import './__logo/hero___logo.css';
 @import './__button/hero__button.css';
+@import './__button/_home-work/hero__button_home-work.css';
+@import './__wrapper/hero__wrapper.css';
+@import './__text/hero__text.css';
+@import './__flex/hero__flex.css';
 
 .hero{
-    margin-block-end: 160px;
+    background-image: url('../../img/background-image-mon.svg');
+    background-position: calc((100% - -10%)/2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-block-end: 27px;
+    position: relative;
 }
+
+

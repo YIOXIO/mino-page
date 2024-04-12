@@ -1,5 +1,10 @@
 .contact__list{
     display: flex;
     flex-direction: column;
+   
 
+}
+.contact__list li{
+    max-inline-size: 400px;
+    inline-size: 100%;
 }

@@ -7,5 +7,5 @@
 .footer{
     background-image: radial-gradient(149.16% 127.86% at 6% 83.83%, #136EB7 0%, #0E4A8F 100%);
     min-block-size: 321px;
-    padding-block: 81.31px 61px;
+    padding-block: 81.31px 0;
 }

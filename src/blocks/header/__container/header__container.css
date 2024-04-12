@@ -1,0 +1,9 @@
+.header__container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-inline-size: 1740px;
+    margin-inline: auto;
+    gap: 20px;
+}
