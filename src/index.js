@@ -43,28 +43,40 @@ const swiper = new Swiper('.sample-slider', {
   
   })
 
-  const speakers = new Swiper('.speakers__slider', {
+
+
+  var speakers = new Swiper('.speakers__slider', {
     grabCursor:true,
-    speed:350, 
-    width: 278,
-    spaceBetween:30,
-    slideShadows:true,
-    slidesPerView:1,
-    centeredSlides : true,    
-    loop: false,
-    // momentumBounceRatio: 25,
-    // momentumRatio: 15,
-    // momentumVelocityRatio: 15,
-    // autoplay: {
-    //     enabled: false,
-    //     delay: 1,
-    //     reverseDirection: false,
-    //     },
-    
-  })
+    spaceBetween: 20,
+    loop: true,
+    speed: 2000,
+    autoplay: {
+      enabled: true,
+        delay: 1,
+      reverseDirection: false,
+        pauseOnMouseEnter: true,
 
+    },
+    breakpoints: {
 
-
+        1200: {
+            slidesPerView: 4,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        576: {
+          slidesPerView: 2,
+      },
+    },
+    mousewheel: {
+      forceNiceScroll: true,
+      invert: false,
+    },
+});
   document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         var button = document.querySelector('.primary-button_fixed');
@@ -113,7 +125,6 @@ document.querySelectorAll('a.header__nav-link').forEach(link => {
     const element = document.getElementById(href);
     const yCoord = element.getBoundingClientRect().top + window.pageYOffset - 120; // Добавляем отступ
 
-    // Закрываем side-navbar перед перемещением к целевому элементу
     document.querySelector('.side-navbar').classList.remove('side-navbar-open');
 
     window.scrollTo({
