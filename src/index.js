@@ -123,7 +123,7 @@ document.querySelectorAll('a.header__nav-link').forEach(link => {
     e.preventDefault();
     const href = this.getAttribute('href').substring(1); // Удаляем # из href
     const element = document.getElementById(href);
-    const yCoord = element.getBoundingClientRect().top + window.pageYOffset - 120; // Добавляем отступ
+    const yCoord = element.getBoundingClientRect().top + window.scrollY - 120; // Добавляем отступ
 
     document.querySelector('.side-navbar').classList.remove('side-navbar-open');
 
