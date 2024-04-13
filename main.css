@@ -70,11 +70,11 @@
 .conception{background-color:#f4f4f4;padding-block:100px}
 @keyframes fadeIn{0%{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@keyframes slideIn{0%{opacity:0;transform:translateX(50px)}50%{transform:translateX(150px)}to{opacity:1;transform:translateY(0)}}@keyframes bounceColor{0%{box-shadow:0 4px 10px 0 rgba(98,155,228,.7)}50%{box-shadow:0 8px 30px 0 rgba(98,155,228,.7)}to{background-position:100% 0;box-shadow:0 4px 10px 0 rgba(98,155,228,.7)}}
 .speakers__card{background-color:#fff;border-radius:16px;display:flex;flex-direction:column;gap:20px;padding-block:34px 0}
-.speakers__duty{-webkit-margin-after:8px;color:#38424f;font-size:13px;font-weight:300;line-height:normal;margin-block-end:8px}
+.speakers__duty{-webkit-margin-after:8px;color:#38424f;font-size:13px;font-weight:300;line-height:normal;margin-block-end:8px;max-inline-size:278px}
 .speakers__img{block-size:278px;border-radius:24px;inline-size:100%;max-inline-size:278px;-o-object-fit:cover;object-fit:cover;-o-object-position:top;object-position:top}
 .speakers__name{-webkit-margin-after:16px;color:#38424f;font-size:24px;font-weight:700;line-height:normal;margin-block-end:16px}
 
-.speakers__theme{color:#38424f;font-size:13px;font-weight:300;line-height:normal}
+.speakers__theme{color:#38424f;font-size:13px;font-weight:300;line-height:normal;max-inline-size:278px}
 
 .speakers__img-wrapper{background-color:#d0e2f1;block-size:278px;border-radius:20px;max-inline-size:278px}
 .speakers{-webkit-margin-after:100px;margin-block-end:100px;overflow:hidden;padding-block:100px}
