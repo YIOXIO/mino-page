@@ -49,7 +49,7 @@ const swiper = new Swiper('.sample-slider', {
     grabCursor:true,
     spaceBetween: 20,
     loop: true,
-    speed: 14000,
+    speed: 2000,
     autoplay: {
       enabled: true,
         delay: 1,
@@ -66,6 +66,7 @@ const swiper = new Swiper('.sample-slider', {
             slidesPerView: 3,
         },
         768: {
+
             slidesPerView: 2,
         },
         576: {
