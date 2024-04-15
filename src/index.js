@@ -118,23 +118,42 @@ slideinElements.forEach(element => {
   observerSlideIn.observe(element);
 });
 
+
 document.querySelectorAll('a.header__nav-link_anchor').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const href = this.getAttribute('href').substring(1); // Удаляем # из href
-    const element = document.getElementById(href);
-    const yCoord = element.getBoundingClientRect().top + window.scrollY - 120; // Добавляем отступ
+  link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const href = this.getAttribute('href');
+      const targetId = href.split('#')[1];
+      let targetUrl = '';
+      const homeUrl = 'http://xn----8sbokcxee2ae3a.xn--p1ai'; 
 
-    document.querySelector('.side-navbar').classList.remove('side-navbar-open');
+      if (targetId && window.location.pathname === homeUrl) {
+          targetUrl = href;
+      } else if (targetId) {
+          targetUrl = homeUrl + href;
+      } else {
+          targetUrl = href;
+      }
 
-    window.scrollTo({
-      top: yCoord,
-      left: 0,
-      behavior: 'smooth'
-    });
+      const element = document.getElementById(targetId);
+      if (element) {
+
+        const yCoord = element.getBoundingClientRect().top + window.scrollY - 150; 
+
+        document.querySelector('.side-navbar').classList.remove('side-navbar-open');
+
+        window.scrollTo({
+          top: yCoord,
+          left: 0,
+          behavior: 'smooth'
+        });
+      } else {
+   
+        window.location.href = targetUrl;
+      }
   });
 });
 
-  document.querySelector('.burger-menu').addEventListener('click', function () {
-    document.querySelector('.side-navbar').classList.toggle('side-navbar-open');
-  });
+document.querySelector('.burger-menu').addEventListener('click', function () {
+  document.querySelector('.side-navbar').classList.toggle('side-navbar-open');
+});
