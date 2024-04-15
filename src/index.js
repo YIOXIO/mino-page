@@ -49,7 +49,7 @@ const swiper = new Swiper('.sample-slider', {
     grabCursor:true,
     spaceBetween: 20,
     loop: true,
-    speed: 2000,
+    speed: 14000,
     autoplay: {
       enabled: true,
         delay: 1,
@@ -60,7 +60,7 @@ const swiper = new Swiper('.sample-slider', {
     breakpoints: {
 
         1200: {
-            slidesPerView: 4,
+            slidesPerView: 4,        
         },
         992: {
             slidesPerView: 3,
@@ -118,7 +118,7 @@ slideinElements.forEach(element => {
   observerSlideIn.observe(element);
 });
 
-document.querySelectorAll('a.header__nav-link').forEach(link => {
+document.querySelectorAll('a.header__nav-link_anchor').forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
     const href = this.getAttribute('href').substring(1); // Удаляем # из href
