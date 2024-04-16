@@ -102,4 +102,46 @@ html{
     color: #0E4E93;
 
 }
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
 
+  ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom, #475DA7, #475DA7, #3f86ed,#04befe );
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+
+.header__nav-link_anchor{
+    position: relative; 
+    outline: none;
+
+}
+
+.header__nav-link_anchor::after {
+    content: '';
+    position: absolute;
+    width: 0%; /* Начальная ширина border'a */
+    height: 1px;
+    background-color: #475DA7;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s; 
+}
+@keyframes growBorder {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+.header__nav-link_anchor:hover::after {
+    animation: growBorder 0.3s forwards;
+}
+
+.header__nav-link_anchor:focus::after {
+    animation: growBorder 0.3s forwards;
+}
