@@ -1,0 +1,9 @@
+
+.popup__content{
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    max-inline-size: 465px;
+}
+

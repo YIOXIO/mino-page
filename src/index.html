@@ -29,7 +29,7 @@
                     </ul>
                     <div class="burger-menu">
                         <div class="burger-line"></div>
-                        <div class="burger-line"></div>
+                        <div class="burger-line"></div> 
                         <div class="burger-line"></div>
                       </div>                      
                     <ul class="header__nav-list side-navbar">
@@ -378,6 +378,30 @@
                     </a>
                 </article>
             </div>  
+        <div class="popup popup__success popup_is_animated">
+            <div class="popup__content">
+                    <article class="success">
+                        <div class="success__container">
+                        <span class="popup__close"></span>
+                            <h2 class="success__message"></h2>
+                            <img class="success-icon" src="<%=require('./img/icons/succecss-icon.png')%>" alt="">
+                        </div>
+                    </article>
+              </div>
+        </div>
+        <div class="popup popup__error popup_is_animated ">
+            <div class="popup__content">
+                    <article class="success">
+                        <div class="success__container">
+                        <span class="popup__close"></span>
+                            <h2 class="error__message">При отправке формы произошла ошибка, попробуйте повторить попытку чуть позже или воспользуйтесь алтернативной формой</h2>
+                            <a class="alternate-link">фин-семинар.рф/алетрнативная-форма</a> 
+                            <img class="success-icon" src="<%=require('./img/icons/fail-icon.png')%>" alt="">
+
+                        </div>
+                    </article>
+              </div>
+        </div>
         </footer>
 </body>
 

@@ -17,6 +17,7 @@
 @import './animation/keyframes.css';
 @import './blocks/speakers/speakers.css';
 @import './blocks/timetable/timetable.css';
+@import './blocks/popup/popup.css';
 
 
 
@@ -55,45 +56,50 @@ html{
     overflow: hidden;
 
 }
+.success{
+    display: flex;
+    justify-content: center;
+    inline-size: 100%;
+}
 
+.success__container{
+    border-radius: 34px;
+    background-color: #FFF;
+    block-size: 465px;
+    inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
-  @media (width <= 768px){
+.success__message{
+    color:#00c851;
+    font-size: 18px;
+    max-inline-size: 400px;
+    text-align: center;
+}
 
+.error__message{
+    color: #f0485e;
+    font-size: 18px;
+    max-inline-size: 400px;
+    text-align: center;
+}
 
-    .burger-menu {
-        cursor: pointer;
-        display: inline-block;
-        padding: 10px;
-      }
-      
-      .burger-line {
-        width: 30px;
-        height: 3px;
-        background-color: #000;
-        margin: 6px 0;
-        z-index: 55;
-        position: relative;
-      }
-      
-      .side-navbar {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #f4f4f4;
-        overflow-x: hidden;
-        transition: 0.5s;
-        display: flex;
-        flex-direction: column;
-        align-self: start;
-        justify-content: center;
-        gap: 25px;
-      }
-      
-      .side-navbar-open {
-       max-inline-size: 450px;
-       inline-size: 100%;
-      }
-  }
+.success-icon{
+    max-inline-size: 100px;
+    max-block-size: 100px;
+    inline-size: 100%;
+}
+
+.alternate-link{
+    max-inline-size: 400px;
+    font-size: 18px;
+    text-align: center;
+    color: #0E4E93;
+
+}
+

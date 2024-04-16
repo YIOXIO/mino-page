@@ -78,46 +78,46 @@ const swiper = new Swiper('.sample-slider', {
       invert: false,
     },
 });
-  document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() {
-        var button = document.querySelector('.primary-button_fixed');
-        if (button) {
-            button.style.display = 'block';
-        }
-    }, 3500);
-});
+//   document.addEventListener("DOMContentLoaded", function() {
+//     setTimeout(function() {
+//         var button = document.querySelector('.primary-button_fixed');
+//         if (button) {
+//             button.style.display = 'block';
+//         }
+//     }, 3500);
+// });
 
-const animatedElements = document.querySelectorAll('.mon-animated');
+// const animatedElements = document.querySelectorAll('.mon-animated');
 
-const observerFade = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animated');
-            observer.unobserve(entry.target);
-        }
-    });
-});
+// const observerFade = new IntersectionObserver((entries, observer) => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add('animated');
+//             observer.unobserve(entry.target);
+//         }
+//     });
+// });
 
 
 
-animatedElements.forEach(element => {
-  observerFade.observe(element);
-});
+// animatedElements.forEach(element => {
+//   observerFade.observe(element);
+// });
 
-const slideinElements = document.querySelectorAll('.mon-slidein');
+// const slideinElements = document.querySelectorAll('.mon-slidein');
 
-const observerSlideIn = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('slidein');
-            observer.unobserve(entry.target);
-        }
-    });
-});
+// const observerSlideIn = new IntersectionObserver((entries, observer) => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add('slidein');
+//             observer.unobserve(entry.target);
+//         }
+//     });
+// });
 
-slideinElements.forEach(element => {
-  observerSlideIn.observe(element);
-});
+// slideinElements.forEach(element => {
+//   observerSlideIn.observe(element);
+// });
 
 
 document.querySelectorAll('a.header__nav-link_anchor').forEach(link => {
@@ -158,3 +158,54 @@ document.querySelectorAll('a.header__nav-link_anchor').forEach(link => {
 document.querySelector('.burger-menu').addEventListener('click', function () {
   document.querySelector('.side-navbar').classList.toggle('side-navbar-open');
 });
+
+const burgerMenu = document.querySelector('.burger-menu');
+
+burgerMenu.addEventListener('click', function() {
+  this.classList.toggle('active');
+});
+
+
+
+
+//JS для модального окна
+const popup = document.querySelector('.popup');
+const buttonClosePopup = document.querySelector('.popup__close');
+
+function openPopup(popupElement) {
+    popupElement.classList.add('popup_is_active');
+    popupElement.addEventListener('click', handleOverlayClosePopup);
+    document.addEventListener('keydown', handleEscClosePopup);
+}
+
+function closePopup(popupElement) {
+    popupElement.classList.remove('popup_is_active');
+    popupElement.removeEventListener('click', handleOverlayClosePopup);
+    document.removeEventListener('keydown', handleEscClosePopup);
+}
+
+function handleOverlayClosePopup(evt) {
+    if (evt.target === evt.currentTarget) {
+        closePopup(evt.currentTarget);
+    }
+}
+
+function handleEscClosePopup(evt) {
+    if (evt.key === 'Escape') {
+        closePopup(document.querySelector('.popup_is_active'));
+    }
+}
+buttonClosePopup.addEventListener('click', () => closePopup(popup));
+
+
+document.addEventListener('wpcf7mailsent', function(event) {
+  var successPopup = document.querySelector('.popup__success');
+  openPopup(successPopup);
+}, false);
+
+
+document.addEventListener('wpcf7mailfailed', function(event) {
+  var errorPopup = document.querySelector('.popup__error');
+  openPopup(errorPopup);
+}, false);
+
