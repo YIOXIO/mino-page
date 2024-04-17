@@ -46,10 +46,10 @@ const swiper = new Swiper('.sample-slider', {
 
 
   var speakers = new Swiper('.speakers__slider', {
-    grabCursor:true,
-    spaceBetween: 20,
+    grabCursor:true,    
     loop: true,
     speed: 2000,
+    waitForTransition:true,
     autoplay: {
       enabled: true,
         delay: 1,
@@ -60,18 +60,27 @@ const swiper = new Swiper('.sample-slider', {
     breakpoints: {
 
         1200: {
-            slidesPerView: 4,        
+            slidesPerView: 4,
+            slidesOffsetBefore:300,
+
         },
         992: {
             slidesPerView: 3,
         },
         768: {
-
-            slidesPerView: 2,
+            slidesPerView: 3,
         },
         576: {
           slidesPerView: 2,
+          spaceBetween:20,
       },
+        320: {
+          slidesPerView: 1,
+          width:300,
+          spaceBetween: 0,
+          autoplay:false,
+        }
+
     },
     mousewheel: {
       forceNiceScroll: true,
@@ -195,7 +204,10 @@ function handleEscClosePopup(evt) {
         closePopup(document.querySelector('.popup_is_active'));
     }
 }
-buttonClosePopup.addEventListener('click', () => closePopup(popup));
+
+if(buttonClosePopup){
+  buttonClosePopup.addEventListener('click', () => closePopup(popup));
+}
 
 
 document.addEventListener('wpcf7mailsent', function(event) {
