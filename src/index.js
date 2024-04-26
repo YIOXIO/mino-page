@@ -87,46 +87,6 @@ const swiper = new Swiper('.sample-slider', {
       invert: false,
     },
 });
-//   document.addEventListener("DOMContentLoaded", function() {
-//     setTimeout(function() {
-//         var button = document.querySelector('.primary-button_fixed');
-//         if (button) {
-//             button.style.display = 'block';
-//         }
-//     }, 3500);
-// });
-
-// const animatedElements = document.querySelectorAll('.mon-animated');
-
-// const observerFade = new IntersectionObserver((entries, observer) => {
-//     entries.forEach(entry => {
-//         if (entry.isIntersecting) {
-//             entry.target.classList.add('animated');
-//             observer.unobserve(entry.target);
-//         }
-//     });
-// });
-
-
-
-// animatedElements.forEach(element => {
-//   observerFade.observe(element);
-// });
-
-// const slideinElements = document.querySelectorAll('.mon-slidein');
-
-// const observerSlideIn = new IntersectionObserver((entries, observer) => {
-//     entries.forEach(entry => {
-//         if (entry.isIntersecting) {
-//             entry.target.classList.add('slidein');
-//             observer.unobserve(entry.target);
-//         }
-//     });
-// });
-
-// slideinElements.forEach(element => {
-//   observerSlideIn.observe(element);
-// });
 
 
 document.querySelectorAll('a.header__nav-link_anchor').forEach(link => {
@@ -178,46 +138,161 @@ burgerMenu.addEventListener('click', function() {
 
 
 //JS для модального окна
-const popup = document.querySelector('.popup');
-const buttonClosePopup = document.querySelector('.popup__close');
+// const popup = document.querySelector('.popup');
+// const buttonClosePopup = document.querySelector('.popup__close');
 
-function openPopup(popupElement) {
-    popupElement.classList.add('popup_is_active');
-    popupElement.addEventListener('click', handleOverlayClosePopup);
-    document.addEventListener('keydown', handleEscClosePopup);
-}
+// function openPopup(popupElement) {
+//     popupElement.classList.add('popup_is_active');
+//     popupElement.addEventListener('click', handleOverlayClosePopup);
+//     document.addEventListener('keydown', handleEscClosePopup);
+// }
 
-function closePopup(popupElement) {
-    popupElement.classList.remove('popup_is_active');
-    popupElement.removeEventListener('click', handleOverlayClosePopup);
-    document.removeEventListener('keydown', handleEscClosePopup);
-}
+// function closePopup(popupElement) {
+//     popupElement.classList.remove('popup_is_active');
+//     popupElement.removeEventListener('click', handleOverlayClosePopup);
+//     document.removeEventListener('keydown', handleEscClosePopup);
+// }
 
-function handleOverlayClosePopup(evt) {
-    if (evt.target === evt.currentTarget) {
-        closePopup(evt.currentTarget);
+// function handleOverlayClosePopup(evt) {
+//     if (evt.target === evt.currentTarget) {
+//         closePopup(evt.currentTarget);
+//     }
+// }
+
+// function handleEscClosePopup(evt) {
+//     if (evt.key === 'Escape') {
+//         closePopup(document.querySelector('.popup_is_active'));
+//     }
+// }
+
+// if(buttonClosePopup){
+//   buttonClosePopup.addEventListener('click', () => closePopup(popup));
+// }
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   let currentStep = 1;
+//   const stepForms = document.querySelectorAll('#stepForm .step');
+
+//   function hideStep(step) {
+//       stepForms[step - 1].style.display = 'none';
+//   }
+
+//   function showStep(step) {
+//       stepForms[step - 1].style.display = 'block';
+//   }
+
+//   function switchToStep(step) {
+//       hideStep(currentStep);
+//       currentStep = step;
+//       showStep(currentStep);
+//   }
+
+//   document.getElementById('stepForm').addEventListener('click', function(event) {
+//       const element = event.target;
+//       if (element.nodeName === 'BUTTON') {
+//           if (element.dataset.next) {
+//               switchToStep(Number(element.dataset.next));
+//           } else if (element.dataset.prev) {
+//               switchToStep(Number(element.dataset.prev));
+//           }
+//       }
+//   });
+
+//   document.addEventListener('wpcf7mailsent', function(event) {
+
+//       switchToStep(2); 
+//   }, false);
+// });
+
+// document.addEventListener('wpcf7mailfailed', function(event) {
+//   var errorPopup = document.querySelector('.popup__error');
+//   openPopup(errorPopup);
+// }, false);
+
+
+
+
+// // Начало кода для табов
+document.addEventListener('DOMContentLoaded', function() {
+  var tabs = document.querySelectorAll('.tab-header-item');
+  var contents = document.querySelectorAll('.tab-content-item');
+
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      tabs.forEach(function(t) {
+        t.classList.remove('active');
+      });
+      contents.forEach(function(content) {
+        content.classList.remove('active');
+      });
+      this.classList.add('active');
+      var content = document.querySelector('.tab-content-item[data-content="'+this.getAttribute('data-tab')+'"]');
+      content.classList.add('active');
+    });
+  });
+});
+ //Конец кода для табов 
+
+ function handleFormNavigation() {
+  document.querySelectorAll('.tab-content-item').forEach(function(tabContent) {
+    let currentStep = 1;
+    const stepForms = tabContent.querySelectorAll('.step');
+
+    function hideStep(step) {
+        stepForms[step - 1].style.display = 'none';
     }
-}
 
-function handleEscClosePopup(evt) {
-    if (evt.key === 'Escape') {
-        closePopup(document.querySelector('.popup_is_active'));
+    function showStep(step) {
+        stepForms[step - 1].style.display = 'block';
     }
+
+    function switchToStep(step) {
+        hideStep(currentStep);
+        currentStep = step;
+        showStep(currentStep);
+    }
+
+    tabContent.querySelector('.step').addEventListener('click', function(event) {
+        const element = event.target;
+        if (element.nodeName === 'BUTTON') {
+            if (element.dataset.next) {
+                switchToStep(Number(element.dataset.next));
+            } else if (element.dataset.prev) {
+                switchToStep(Number(element.dataset.prev));
+            }
+        }
+    });
+
+    document.addEventListener('wpcf7mailsent', function(event) {
+        switchToStep(2); 
+        var tabs = document.querySelectorAll('.tab-header-item');
+        tabs.forEach(function(tab) {
+            tab.style.display = 'none';
+        });
+    }, false);
+  });
 }
 
-if(buttonClosePopup){
-  buttonClosePopup.addEventListener('click', () => closePopup(popup));
+function handleTabNavigation() {
+  var tabs = document.querySelectorAll('.tab-header-item');
+  var contents = document.querySelectorAll('.tab-content-item');
+  tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+          tabs.forEach(function(t) {
+              t.classList.remove('active');
+          });
+          contents.forEach(function(content) {
+              content.classList.remove('active');
+          });
+          this.classList.add('active');
+          var content = document.querySelector('.tab-content-item[data-content="'+this.getAttribute('data-tab')+'"]');
+          content.classList.add('active');
+      });
+  });
 }
 
-
-document.addEventListener('wpcf7mailsent', function(event) {
-  var successPopup = document.querySelector('.popup__success');
-  openPopup(successPopup);
-}, false);
-
-
-document.addEventListener('wpcf7mailfailed', function(event) {
-  var errorPopup = document.querySelector('.popup__error');
-  openPopup(errorPopup);
-}, false);
-
+document.addEventListener('DOMContentLoaded', function() {
+  handleFormNavigation();
+  handleTabNavigation();
+});

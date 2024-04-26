@@ -145,3 +145,82 @@ html{
 .header__nav-link_anchor:focus::after {
     animation: growBorder 0.3s forwards;
 }
+
+.tabs {
+    width: 100%;
+  }
+  
+  .tab-header {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  align-items: end
+  }
+  
+  .tab-header-item {
+    display: flex;
+    max-inline-size: 400px;
+    max-block-size: 85px;
+    block-size: 100%;
+    padding: 0px 24px 10px 24px;
+    align-items: flex-end;
+    gap: 10px;
+    color: #ADAEB1;
+    font-family: 'Geometria';
+    font-size: 20px;
+    font-style: normal;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    border-bottom: 2px solid #9FABC5;
+    padding-inline-start: 20px;
+    transition: color 0.3s, border-bottom-color 0.3s; /* Добавляем плавный переход цвета фона и цвета границы */
+  }
+  
+.tab-header-item:hover{
+  color: #28337ce0;
+  border-bottom-color: #28337ce0;
+
+}
+
+  .tab-header-item.active {
+    color: #28337C;
+    border-bottom-color: #28337C;
+    opacity: 1;
+  }
+  
+  .tab-content-item {
+    display: none;
+    padding: 20px;
+    animation: fadeIn 0.3s; /* Добавляем анимацию появления */
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .tab-content-item.active {
+    display: block;
+    animation: fadeIn 0.3s; /* Добавляем анимацию появления */
+  }
+
+  .contact__tel{
+    color: #4A4A49;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .contact__phones-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .contact__person{
+    color: #3F3F3E;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+  }

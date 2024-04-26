@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <article class="header__container">
+                    <ul class="header__nav-list header__nav-list_grid">
+                        <li>
+                            <a class="header__nav-link" href="/">
+                                <img class="header__logo" src="<%=require('./img/icons/logo.svg')%>" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="header__nav-link" href="/">
+                                <img class="header__logo" src="<%=require('./img/icons/mon-logo.svg')%>" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="header__nav-link_bold" href="/">Семинары-совещания <br> в формате
+                                стратегической<br> сессии</a>
+                        </li>
+                    </ul>
+                    <div class="burger-menu">
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
+                    </div>
+                    <ul class="header__nav-list side-navbar">
+                        <li>
+                            <a class="header__nav-link" href="/">О стратегической сессии</a>
+                        </li>
+                        <li>
+                            <a class="header__nav-link header__nav-link_anchor" href="#programm-section">Программа</a>
+                        </li>
+                        <li>
+                            <a class="header__nav-link header__nav-link_anchor" href="#contact-section">Контакты</a>
+                        </li>
+                        <li>
+                            <a class="primary-button header__nav-link"
+                                href="http://xn----8sbokcxee2ae3a.xn--p1ai/%d1%80%d0%b5%d0%b3%d0%b8%d1%81%d1%82%d1%80%d0%b0%d1%86%d0%b8%d1%8f/">Зарегистрироваться</a>
+                        </li>
+                    </ul>
+                </article>
+            </nav>
+        </div>
+
+    </header>
+    <main class="mon-main">
+        <section>
+            <div class="container">
+                <div class="tabs">
+                    <div class="tab-header">
+                        <div class="tab-header-item  active" data-tab="1">Ректор</div>
+                        <div class="tab-header-item " data-tab="2">Руководитель (Проректор)
+                            по стратегическому <br>
+                            развитию*</div>
+                        <div class="tab-header-item " data-tab="3">Руководитель (Проректор)
+                            по финансово-экономической
+                            деятельности*</div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-content-item active" data-content="1">
+                            <div id="stepForm">
+                                <div id="step1" class="step">
+                                    <div class="form wpcf7-form" action="/submit-form" method="post">
+                                        <h2 class="form__header">РЕГИСТРАЦИЯ УЧАСТНИКА
+                                        </h2>
+                                        <ul class="form__list">
+
+                                            <li>
+                                                <p><label class="form__label" for="surname">Фамилия</label><br>
+                                                    <span class="wpcf7-form-control-wrap" data-name="Middle_name"><input
+                                                            size="40"
+                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form__input wpcf7-not-valid"
+                                                            aria-required="true" aria-invalid="true"
+                                                            placeholder="Иванов" value="" type="text" name="Middle_name"
+                                                            aria-describedby="wpcf7-f108-o1-ve-Middle_name"><span
+                                                            class="wpcf7-not-valid-tip" aria-hidden="true">Важно
+                                                            заполнить это поле.</span></span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><label class="form__label" for="name">Имя</label><br>
+                                                    <span class="wpcf7-form-control-wrap" data-name="Name"><input
+                                                            size="40"
+                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form__input wpcf7-not-valid"
+                                                            aria-required="true" aria-invalid="true" placeholder="Иван"
+                                                            value="" type="text" name="Name"
+                                                            aria-describedby="wpcf7-f108-o1-ve-Name"><span
+                                                            class="wpcf7-not-valid-tip" aria-hidden="true">Важно
+                                                            заполнить это поле.</span></span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><label class="form__label" for="patronymic">Отчество</label><br>
+                                                    <span class="wpcf7-form-control-wrap" data-name="Otchecstvo"><input
+                                                            size="40" class="wpcf7-form-control wpcf7-text form__input"
+                                                            aria-invalid="false" placeholder="Иванович" value=""
+                                                            type="text" name="Otchecstvo"></span>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <ul class="form__list form__list_long">
+                                            <li>
+                                                <p><label class="form__label" for="phone">Телефон</label><br>
+                                                    <span class="wpcf7-form-control-wrap" data-name="fin_phone"><input
+                                                            size="40"
+                                                            class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel form__input wpcf7-not-valid"
+                                                            aria-required="true" aria-invalid="true"
+                                                            placeholder="+7 (986) 456-66-45" value="" type="tel"
+                                                            name="fin_phone"
+                                                            aria-describedby="wpcf7-f108-o1-ve-fin_phone"><span
+                                                            class="wpcf7-not-valid-tip" aria-hidden="true">Важно
+                                                            заполнить это поле.</span></span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><label class="form__label" for="email">E-mail</label><br>
+                                                    <span class="wpcf7-form-control-wrap" data-name="fin_mail"><input
+                                                            size="40"
+                                                            class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form__input wpcf7-not-valid"
+                                                            aria-required="true" aria-invalid="true"
+                                                            placeholder="ivanov@mail.ru" value="" type="email"
+                                                            name="fin_mail"
+                                                            aria-describedby="wpcf7-f108-o1-ve-fin_mail"><span
+                                                            class="wpcf7-not-valid-tip" aria-hidden="true">Важно
+                                                            заполнить это поле.</span></span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><label class="form__label" for="organization">Название
+                                                        организации:</label><br>
+                                                    <span class="wpcf7-form-control-wrap"
+                                                        data-name="organisation"><input size="40"
+                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form__input wpcf7-not-valid"
+                                                            aria-required="true" aria-invalid="true"
+                                                            placeholder="Например, ФГБОУ ВО «...»" value="" type="text"
+                                                            name="organisation"
+                                                            aria-describedby="wpcf7-f108-o1-ve-organisation"><span
+                                                            class="wpcf7-not-valid-tip" aria-hidden="true">Важно
+                                                            заполнить это поле.</span></span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><label class="form__label" for="position">Должность согласно штатному
+                                                        расписанию</label><br>
+                                                    <span class="wpcf7-form-control-wrap" data-name="position"><input
+                                                            size="40"
+                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form__input wpcf7-not-valid"
+                                                            aria-required="true" aria-invalid="true"
+                                                            placeholder="Например: Проректор по финансовой деятельности"
+                                                            value="" type="text" name="position"
+                                                            aria-describedby="wpcf7-f108-o1-ve-position"><span
+                                                            class="wpcf7-not-valid-tip" aria-hidden="true">Важно
+                                                            заполнить это поле.</span></span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><label class="form__label" for="position">Марка транспортного
+                                                        средства</label><br>
+                                                    <span class="wpcf7-form-control-wrap" data-name="transport"><input
+                                                            size="40" class="wpcf7-form-control wpcf7-text form__input"
+                                                            aria-invalid="false" placeholder="Например: ЗИЛ-111Г"
+                                                            value="" type="text" name="transport"></span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><label class="form__label" for="position">Номер транспортного
+                                                        средства</label><br>
+                                                    <span class="wpcf7-form-control-wrap"
+                                                        data-name="tranposrt_number"><input size="40"
+                                                            class="wpcf7-form-control wpcf7-text form__input"
+                                                            aria-invalid="false" placeholder="ОО123К 123" value=""
+                                                            type="text" name="tranposrt_number"></span>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <div class="form__wrapper">
+                                            <p><label class="form__label">Домашнее задание</label>
+                                            </p>
+                                            <div class="form__wrapper-content">
+                                                <p class="file-text">Файл с домашним заданием (в формате doc, docx,
+                                                    pptx, xls, pdf - до 25 Mb)
+                                                </p>
+                                                <p><span class="wpcf7-form-control-wrap" data-name="file"><input
+                                                            size="40" class="wpcf7-form-control wpcf7-file"
+                                                            accept=".doc,.docx,.pptx,.xls,.pdf" aria-invalid="false"
+                                                            type="file" name="file"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="form__wrapper form__wrapper_jsce">
+                                            <p>
+                                                <button class="primary-button" type="button"
+                                                    data-next="2">Далее</button>
+
+                                            </p>
+                                            <p class="policy"><span class="wpcf7-form-control-wrap"
+                                                    data-name="checkbox-826"><span
+                                                        class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required wpcf7-not-valid"
+                                                        aria-describedby="wpcf7-f108-o1-ve-checkbox-826"><span
+                                                            class="wpcf7-list-item first last"><label><input
+                                                                    type="checkbox" name="checkbox-826[]"
+                                                                    value="Согласие"><span
+                                                                    class="wpcf7-list-item-label">Согласие</span></label></span></span><span
+                                                        class="wpcf7-not-valid-tip" aria-hidden="true">Важно заполнить
+                                                        это поле.</span></span><a class="policy__link" target="_blank"
+                                                    href="/wp-content/uploads/2024/04/Требования_к_согласию_на_обработку_персональных_данных.pdf">Согласие
+                                                    на обработку персональных данных</a>
+                                            </p>
+                                            <p class="policy">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="step2" class="step" style="display: none;">
+                                    <h2 class="form__header">Опросный лист</h2>
+                                    <h2>Шаг 2</h2>
+                                    <script src="https://forms.yandex.ru/_static/embed.js"></script><iframe
+                                        height="600px"
+                                        src="https://forms.yandex.ru/u/66154f362530c21a65e59ee5/?iframe=1"
+                                        frameborder="0" name="ya-form-66154f362530c21a65e59ee5" width="100%"></iframe>
+                                    <button type="button" data-prev="1">Назад</button>
+                                    <button type="submit">Отправить</button>
+                                </div>
+
+                            </div>
+                            <div class="tab-content-item" data-content="2">Content 2</div>
+                            <div class="tab-content-item" data-content="3">Content 3</div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li>
+                        <a class="footer__nav-link" href="/">
+                            <img class="footer__logo" src="<%=require('./img/icons/logo.svg')%>" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer__nav-link" href="/">
+                            <img class="footer__logo" src="<%=require('./img/icons/mon-logo_footer.svg')%>" alt="">
+                        </a>
+                        <a class="footer__nav-link footer__nav-link_bold" href="/">Семинары-совещания <br> в формате
+                            стратегической<br> сессии</a>
+                    </li>
+                </ul>
+            </nav>
+            <article class="footer__wrapper">
+                <p class="footer__text">МОСКВА 25 - 26.04.2024</p>
+                <a class="footer__nav-link" href="https://t.me/fin_seminar">
+                    <img class="footer__icon" src="<%=require('./img/icons/telegram-icon.svg')%>" alt="">
+                </a>
+            </article>
+        </div>
+        <div class="popup popup__success popup_is_animated">
+            <div class="popup__content">
+                <article class="success">
+                    <div class="success__container">
+                        <span class="popup__close"></span>
+                        <h2 class="success__message"></h2>
+                        <img class="success-icon" src="<%=require('./img/icons/succecss-icon.png')%>" alt="">
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="popup popup__error popup_is_animated ">
+            <div class="popup__content">
+                <article class="success">
+                    <div class="success__container">
+                        <span class="popup__close"></span>
+                        <h2 class="error__message">При отправке формы произошла ошибка, попробуйте повторить попытку
+                            чуть позже или воспользуйтесь алтернативной формой</h2>
+                        <a class="alternate-link">фин-семинар.рф/алетрнативная-форма</a>
+                        <img class="success-icon" src="<%=require('./img/icons/fail-icon.png')%>" alt="">
+
+                    </div>
+                </article>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
+
