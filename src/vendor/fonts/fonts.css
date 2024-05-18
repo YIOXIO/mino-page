@@ -46,3 +46,15 @@
     font-weight: 700;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Geometria';
+    src: url('Geometria-ExtraBold.eot');
+    src: local('Geometria ExtraBold'), local('Geometria-ExtraBold'),
+        url('Geometria-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Geometria-ExtraBold.woff2') format('woff2'),
+        url('Geometria-ExtraBold.woff') format('woff'),
+        url('Geometria-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
