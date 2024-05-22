@@ -1,8 +1,9 @@
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Программа мероприятий</title>
 </head>
+
 <body class="root">
     <header class="header">
         <div class="container">
@@ -10,31 +11,33 @@
                 <article class="header__container">
                     <ul class="header__nav-list header__nav-list_grid">
                         <li>
-                                <a class="header__nav-link" href="/">
-                                    <img class="header__logo" src="<%=require('./img/icons/logo.svg')%>" alt="">
-                                </a>
-                        </li>
-                        <li>
                             <a class="header__nav-link" href="/">
-                                <img class="header__logo" src="<%=require('./img/icons/mon-logo.svg')%>" alt="">
+                                <img class="header__logo" src="<%=require('./img/icons/logo.svg')%>" alt="" />
                             </a>
                         </li>
                         <li>
-                            <a class="header__nav-link_bold" href="/">Семинары-совещания <br> в формате стратегической<br> сессии</a>
+                            <a class="header__nav-link" href="/">
+                                <img class="header__logo" src="<%=require('./img/icons/mon-logo.svg')%>" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="header__nav-link_bold" href="/">Семинары-совещания <br />
+                                в формате стратегической<br />
+                                сессии</a>
                         </li>
                     </ul>
                     <div class="burger-menu">
                         <div class="burger-line"></div>
                         <div class="burger-line"></div>
                         <div class="burger-line"></div>
-                      </div>
-                      
+                    </div>
+
                     <ul class="header__nav-list side-navbar">
                         <li>
-                            <a class="header__nav-link" href="/">О стратегической сессии</a>        
+                            <a class="header__nav-link" href="/">О стратегической сессии</a>
                         </li>
                         <li>
-                            <a class="header__nav-link"  href="#programm-section">Программа</a>
+                            <a class="header__nav-link" href="#programm-section">Программа</a>
                         </li>
                         <li>
                             <a class="header__nav-link" href="#contact-section">Контакты</a>
@@ -46,126 +49,237 @@
                 </article>
             </nav>
         </div>
-
     </header>
 
     <main class="mon-main">
         <section class="timetable">
             <div class="container">
                 <h1 class="section-title timetable__title">Программа мероприятий</h1>
-                <h2 class="timetable__subtitle">За две недели до мероприятия - домашнее задание для участников</h2>
-                <ul class="timetable__list">
-                    <li>
-                        <p class="timetable__info">систематизировать знания программы развития вуза в части стратегической цели и целевых показателей деятельности, связанных с финансовой моделью</p>
-                    </li>
-                    <li>
-                        <p class="timetable__info">описать текущую финансовую модель вуза</p>
-                    </li>
-                    <li>
-                        <p class="timetable__info">сформулировать видение финансовой модели вуза в горизонте до 2030 года</p>
-                    </li>
-                </ul>
                 <article class="timetable__wrapper">
-                    <h2 class="timetable__date">день 25.04.2024</h2>
+                    <h2 class="timetable__date">03.06.2024</h2>
                     <ul class="timetable__schedule">
+                        <li>
+                            <article class="timetable__schedule-wrapper timetable__schedule-wrapper_bg-color">
+                                <h2 class="timetable__date">Время</h2>
+                            </article>
+                        </li>
                         <li>
                             <article class="timetable__schedule-list">
                                 <p class="timetable__schedule-time">09.00 - 10.00</p>
-                                <p class="timetable__schedule-header">Регистрация участников, приветственный кофе</p>
+                                <article class="timetable__schedule-wrapper timetable__schedule-wrapper_bg-color">
+                                    <p class="timetable__schedule-description timetable__schedule-description_italic">
+                                        Регистрация участников, приветственный кофе
+                                    </p>
+                                </article>
                             </article>
                         </li>
                         <li>
                             <article class="timetable__schedule-list">
                                 <p class="timetable__schedule-time">10.00 - 12.00</p>
-                                <p class="timetable__schedule-header">Пленарная панельная сессия</p>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="timetable__schedule-list">
-                                <p class="timetable__schedule-time">12.30 - 14.00</p>
-                           
+
                                 <article class="timetable__schedule-wrapper">
-                                    <p class="timetable__schedule-header">Дискуссия с руководителями вузов </p>
-                                    <p class="timetable__schedule-description">Ведущие - Омельчук А.В.</p>
-                                    <p class="timetable__schedule-description">Канукоев А.С. </p>
-                                    <p class="timetable__schedule-description timetable__schedule-description-mbe">Переход от модели управления ресурсами университета к модели создания ценности</p>
-                                    <p class="timetable__schedule-header">Групповая работа с командами университетов и органами власти
+                                    <p class="timetable__schedule-header">
+                                        Пленарная панельная сессия
                                     </p>
-                                   <p class="timetable__schedule-description">Группы по 10-15 человек. Работа с домашним заданием.
-                                   </p>
-                                   <p class="timetable__schedule-description">Тема «Целевая и финансовая модель университета: где разрыв?»</p>
-                                </article>           
+                                    <p class="timetable__schedule-description">А.В. Омельчук </p>
+                                    <p class="timetable__schedule-description">
+                                        Переход от модели управления ресурсами университета к модели
+                                        создания ценности
+                                    </p>
+                                    <p class="timetable__schedule-description">Канукоев А.С.</p>
+                                    <p class="timetable__schedule-description">
+                                        Финансовая служба – ключевой партнер в системе управления
+                                    </p>
+                                </article>
                             </article>
                         </li>
                         <li>
                             <article class="timetable__schedule-list">
-                                <p class="timetable__schedule-time">15.00 - 16.30</p>
+                                <p class="timetable__schedule-time">12.00 - 12.30</p>
+                                <article class="timetable__schedule-wrapper timetable__schedule-wrapper_bg-color">
+                                    <p class="timetable__schedule-description timetable__schedule-description_italic">
+                                        Кофе-брейк
+                                    </p>
+                                </article>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="timetable__schedule-list">
+                                <p class="timetable__schedule-time">12.30 - 14.30</p>
                                 <article class="timetable__schedule-wrapper">
-                                    <p class="timetable__schedule-header">Групповая работа с командами университетов и органами власти</p>
-                                    <p class="timetable__schedule-description">Тема «Выявление барьеров на пути к реализации целевой финансовой модели вуза»</p>
+                                    <p class="timetable__schedule-header">
+                                        Панельные экспертные сессии
+                                    </p>
+                                </article>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="timetable__schedule-list">
+                                <p class="timetable__schedule-time">14.30 - 15.30</p>
+                                <article class="timetable__schedule-wrapper timetable__schedule-wrapper_bg-color">
+                                    <p class="timetable__schedule-description timetable__schedule-description_italic">
+                                        Обед
+                                    </p>
+                                </article>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="timetable__schedule-list">
+                                <p class="timetable__schedule-time">15.30 - 17.00</p>
+                                <article class="timetable__schedule-wrapper timetable__schedule-wrapper_grid">
+                                    <article>
+                                        <p class="timetable__schedule-header">
+                                            Панельная дискуссия с руководителями вузов
+                                        </p>
+                                        <p class="timetable__schedule-description timetable__schedule-description-mbe">
+                                            Спикеры – А.В. Омельчук, А.С. Канукоев
+                                        </p>
+                                    </article>
+                                    <article>
+                                        <p class="timetable__schedule-header">
+                                            Групповая работа с командами университетов и представителями
+                                            органов власти
+                                        </p>
+                                        <p class="timetable__schedule-description">
+                                            Целевая и финансовая модели университета: где разрыв?
+                                        </p>
+                                    </article>
+   
 
                                 </article>
                             </article>
                         </li>
                         <li>
                             <article class="timetable__schedule-list">
-                                <p class="timetable__schedule-time">17.00 - 18.00</p>
-                                <article class="timetable__schedule-wrapper">
-                                    <p class="timetable__schedule-header">Краткие итоги дня.</p>
-                                    <p class="timetable__schedule-description">Презентации от модераторов. Систематизация выявленных барьеров. Комментарий от Омельчука А.В. и постановка задачи на 2 день сессии</p>
+                                <p class="timetable__schedule-time">17.00 - 17.30</p>
+                                <article class="timetable__schedule-wrapper timetable__schedule-wrapper_bg-color">
+                                    <p class="timetable__schedule-description timetable__schedule-description_italic">
+                                        Кофе-брейк
+                                    </p>
                                 </article>
-  
+                            </article>
+                        </li>
+                        <li>
+                            <article class="timetable__schedule-list">
+                                <p class="timetable__schedule-time">17.30 - 18.00</p>
+                                <article class="timetable__schedule-wrapper">
+                                    <p class="timetable__schedule-header">
+                                        Краткие итоги дня. Постановка задач на 2 день сессии
+                                    </p>
+                                </article>
                             </article>
                         </li>
                     </ul>
                 </article>
+
+                <!-- ДЕНЬ 2 -->
                 <article class="timetable__wrapper">
-                    <h2 class="timetable__date">день 26.04.2024</h2>
+                    <h2 class="timetable__date">04.06.2024</h2>
+
                     <ul class="timetable__schedule">
                         <li>
+                            <article class="timetable__schedule-wrapper timetable__schedule-wrapper_bg-color">
+                                 <h2 class="timetable__date">Время</h2>
+                            </article>
+                        </li>
+                        <li>
                             <article class="timetable__schedule-list">
-                                <p class="timetable__schedule-time">10.00 - 12.00</p>
-                                <article class="timetable__schedule-wrapper">
-                                    <p class="timetable__schedule-header">Панельные экспертные сессии  </p>
-                                    <p class="timetable__schedule-description">2 параллельных потока: 1. Как создавать ценность и зарабатывать деньги; 2. Как управлять расходами и процессами
+                                <p class="timetable__schedule-time">09.00 - 10.00</p>
+                                <article class="timetable__schedule-wrapper timetable__schedule-wrapper_bg-color">
+                                    <p class="timetable__schedule-description timetable__schedule-description_italic">
+                                        Приветственный кофе
                                     </p>
                                 </article>
                             </article>
                         </li>
                         <li>
                             <article class="timetable__schedule-list">
-                                <p class="timetable__schedule-time">12.30 - 14.00</p>
+                                <p class="timetable__schedule-time">10.00 - 11.00</p>
                                 <article class="timetable__schedule-wrapper">
-                                    <p class="timetable__schedule-header">Проектная работа по тематическим потокам.</p>
-                                    <p class="timetable__schedule-description">Как устранить барьеры перехода к целевой финансовой модели
+                                    <p class="timetable__schedule-header">
+                                        Панельные экспертные сессии
+                                    </p>
+                                    <p class="timetable__schedule-description">
+                                        Тема 1. Как создавать ценность и зарабатывать деньги
+                                    </p>
+                                    <p class="timetable__schedule-description">
+                                        Тема 2. Как управлять расходами и процессами
                                     </p>
                                 </article>
+                            </article>
                         </li>
                         <li>
                             <article class="timetable__schedule-list">
-                                <p class="timetable__schedule-time">15.00 - 16.30</p>
-                                <article class="timetable__schedule-wrapper">
-                                    <p class="timetable__schedule-header">Проектная работа по тематическим потокам.
-                                    </p>
-                                    <p class="timetable__schedule-description">Как устранить барьеры перехода к целевой финансовой модели
+                                <p class="timetable__schedule-time">11.00 - 11.30</p>
+                                <article class="timetable__schedule-wrapper timetable__schedule-wrapper_bg-color">
+                                    <p class="timetable__schedule-description timetable__schedule-description_italic">
+                                        Кофе-брейк
                                     </p>
                                 </article>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="timetable__schedule-list">
+                                <p class="timetable__schedule-time">11.30 - 13.30</p>
+                                <article class="timetable__schedule-wrapper">
+                                    <p class="timetable__schedule-header">
+                                        Групповая работа с командами университетов и представителями органов власти 
+                                    </p>
+                                    <p class="timetable__schedule-description">
+                                        Тема: Выявление барьеров на пути к реализации целевой финансовой модели вуза
+                                    </p>
+                                </article>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="timetable__schedule-list">
+                                <p class="timetable__schedule-time">13.30 - 14.30</p>
+                                <article class="timetable__schedule-wrapper timetable__schedule-wrapper_bg-color">
+                                    <p class="timetable__schedule-description timetable__schedule-description_italic">
+                                        Обед
+                                    </p>
+                                </article>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="timetable__schedule-list">
+                                <p class="timetable__schedule-time">14.30 - 16.30</p>
+                                <article class="timetable__schedule-wrapper">
+                                    <p class="timetable__schedule-header">
+                                        Групповая работа с командами университетов и представителями
+                                        органов власти
+                                    </p>
+                                    <p class="timetable__schedule-description">
+                                        Тема: Устранение внутренних и внешних барьеров перехода к целевой финансовой модели
+                                    </p>
+                                </article>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="timetable__schedule-list">
+                                <p class="timetable__schedule-time">16.30 - 17.00</p>
+                                <article class="timetable__schedule-wrapper timetable__schedule-wrapper_bg-color">
+                                    <p class="timetable__schedule-description timetable__schedule-description_italic">
+                                        Кофе-брейк
+                                    </p>
+                                </article>
+                            </article>
                         </li>
                         <li>
                             <article class="timetable__schedule-list">
                                 <p class="timetable__schedule-time">17.00 - 18.00</p>
                                 <article class="timetable__schedule-wrapper">
-                                    <p class="timetable__schedule-header">Презентации от модераторов с итогами обсуждений.</p>
-                                    <p class="timetable__schedule-description">Комментарии от команд. Интерактивное голосование. Комментарий от Омельчука А.В. и подведение итогов сессии
-
+                                    <p class="timetable__schedule-header">
+                                        Подведение итогов стратегической сессии. Дискуссия
                                     </p>
                                 </article>
+                            </article>
                         </li>
                     </ul>
                 </article>
-                <a class="primary-button timetable__button">СКАЧАТЬ ПОДРОБНУЮ ПРОГРАММУ</a>
+                <a href="/wp-content/uploads/2024/05/Программа-мероприятий.pdf" target="_blank"
+                    class="primary-button timetable__button">СКАЧАТЬ ПОДРОБНУЮ ПРОГРАММУ</a>
             </div>
-
         </section>
     </main>
 
@@ -175,21 +289,23 @@
                 <ul class="footer__nav-list">
                     <li>
                         <a class="footer__nav-link" href="/">
-                            <img class="footer__logo" src="<%=require('./img/icons/logo.svg')%>" alt="">
+                            <img class="footer__logo" src="<%=require('./img/icons/logo.svg')%>" alt="" />
                         </a>
-                </li>
-                <li>
-                    <a class="footer__nav-link" href="/">
-                        <img class="footer__logo" src="<%=require('./img/icons/mon-logo_footer.svg')%>" alt="">
-                    </a>
-                    <a class="footer__nav-link footer__nav-link_bold" href="/">Семинары-совещания <br> в формате стратегической<br> сессии</a>
-                </li>
+                    </li>
+                    <li>
+                        <a class="footer__nav-link" href="/">
+                            <img class="footer__logo" src="<%=require('./img/icons/mon-logo_footer.svg')%>" alt="" />
+                        </a>
+                        <a class="footer__nav-link footer__nav-link_bold" href="/">Семинары-совещания <br />
+                            в формате стратегической<br />
+                            сессии</a>
+                    </li>
                 </ul>
             </nav>
             <article class="footer__wrapper">
                 <p class="footer__text">МОСКВА 25 - 26.04.2024</p>
             </article>
-        </div>  
+        </div>
         <button class="primary-button open-popup">Открыть окно</button>
     </footer>
 </body>

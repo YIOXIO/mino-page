@@ -1,12 +1,13 @@
 .timetable__schedule-list{
     display: flex;
-    gap: 30px;
-    padding-block: 30px;
     flex-wrap: wrap;
+    margin-block-end: 25px;
+
 }
 @media (width >= 768px){
     .timetable__schedule-list{
         flex-wrap: nowrap;
+        margin-block-end: 0;
     }
     
 }

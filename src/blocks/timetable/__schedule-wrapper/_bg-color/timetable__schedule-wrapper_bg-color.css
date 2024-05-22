@@ -1,0 +1,13 @@
+.timetable__schedule-wrapper_bg-color{
+    background-color: #F7F7F7;
+}
+
+.timetable__schedule-wrapper_bg-color:nth-child(1){
+    background-color: #EDEDED;
+    padding-inline: 30px;
+}
+@media (width: 768px){
+    .timetable__schedule-wrapper_bg-color:nth-child(1){
+        padding-inline: 10px;
+    }
+}

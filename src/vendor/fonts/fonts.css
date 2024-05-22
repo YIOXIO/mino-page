@@ -37,6 +37,19 @@
 
 @font-face {
     font-family: 'Geometria';
+    src: url('Geometria-MediumItalic.eot');
+    src: local('Geometria Medium Italic'), local('Geometria-MediumItalic'),
+        url('Geometria-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Geometria-MediumItalic.woff2') format('woff2'),
+        url('Geometria-MediumItalic.woff') format('woff'),
+        url('Geometria-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Geometria';
     src: url('Geometria-Bold.eot');
     src: local('Geometria Bold'), local('Geometria-Bold'),
         url('Geometria-Bold.eot?#iefix') format('embedded-opentype'),

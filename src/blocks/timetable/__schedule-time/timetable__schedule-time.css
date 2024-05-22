@@ -4,6 +4,17 @@
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
-    max-inline-size: 278px;
     inline-size: 100%;
+    padding-block:30px;
+    padding-inline:30px;
+
+    background-color: #EDEDED;
+}
+
+@media (width >=768px){
+    .timetable__schedule-time{
+    max-inline-size: 197px;
+    padding-inline:10px;
+
+    }
 }
