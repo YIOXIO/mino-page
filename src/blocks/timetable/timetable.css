@@ -3,10 +3,11 @@
 @import './__info/timetable__info.css';
 @import './__list/timetable__list.css';
 @import './__schedule-description/timetable__schedule-description.css';
-@import './__schedule-description/_italic/timetable__schedule-description_color.css';
+@import './__schedule-description/_italic/timetable__schedule-description_fw.css';
 @import './__schedule-header/timetable__schedule-header.css';
 @import './__schedule-list/timetable__schedule-list.css';
 @import './__schedule-time/timetable__schedule-time.css';
+@import './__schedule-place/timetable__schedule-place.css';
 @import './__schedule-wrapper/timetable__schedule-wrapper.css';
 @import './__schedule-wrapper/_bg-color/timetable__schedule-wrapper_bg-color.css';
 @import './__schedule-wrapper/_grid/timetable__schedule-wrapper_grid.css';
@@ -17,4 +18,143 @@
 
 .timetable{
     margin-block: 120px;
+}
+
+.timetable__schedule-container{
+    display: flex;
+    flex-basis:100%;
+    flex-direction: column; 
+}
+.timetable__schedule-wrapper_column{
+    flex-direction: column;
+    align-items: flex-start;
+    padding-block-start:0 ;
+}
+.timetable__schedule-wrapper_column > li{
+    list-style-type: auto;
+    margin-block-end: 12px;
+    border-top: none ;
+
+}
+
+.timetable__schedule-wrapper_column > li:last-child{
+    list-style-type: none;
+    border-top: none ;
+    margin-block-end: 0;
+
+}
+
+.timetable__schedule-wrapper_column > .no-demical{
+    list-style-type: none;
+}
+
+.timetable__schedule-description_theme{
+    font-weight: 500;
+    color: #475da7;
+    max-inline-size: 630px;
+}
+
+.timetable__schedule-name{
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+
+.timetable__header{
+    display: none;
+    grid-template-columns: minmax(12%,.67fr) 2.55fr clamp(10.063rem,-.823rem + 19.014vw,10.438rem);
+    padding-inline: 30px;
+    padding-block: 30px;
+    background-color: #87ceeb78;
+}
+.timetable__schedule-description_fw-italic{
+    font-style: italic;
+}
+.timetable__card{
+    display: grid;
+    gap: 35px clamp(1.25rem, -6.223rem + 19.928vw, 8.125rem);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    min-block-size: 70px;
+    padding-block: 15px;
+
+    /* padding-inline-start: clamp(1.25rem, .186rem + 4.255vw, 3.25rem); */
+}
+.timetable-span{
+    text-align: center;
+}
+
+
+
+.timetable__block{
+    border-bottom: 2px solid #E5E5E5;
+    padding-block-end: 20px;
+    margin-block-end: 30px;
+}
+
+.timetable__title-description{
+    color: #475da7;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+    max-inline-size: 1100px;
+    margin-inline: auto;
+}
+
+
+
+.timetable__day{
+    color: #28337C;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+    margin-block-end: 20px;
+    text-align: center;
+}
+
+
+.timetable__place > span{
+    color: #475da7;
+    font-weight: 600;
+}
+.timetable__place{
+    color: #38424f;
+    font-weight: 600;
+    font-size: 18px;
+    font-weight: 300;
+    margin-block-end: 20px;
+    padding-inline-start: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (width >= 916px){
+    .timetable__header{
+    display: grid;
+
+    }
+
+    .timetable__hidden-heading{
+        display: none;
+    }
+
+    .timetable__card{
+        grid-template-columns: minmax(12%,.67fr) 2.55fr clamp(10.063rem,-.823rem + 19.014vw,10.438rem);
+        gap: 0;
+    padding-inline: 30px ;
+
+    }
 }

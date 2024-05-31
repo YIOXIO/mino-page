@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function () {
           case 'Проректор, отвечающий за финансово-экономическую деятельность*':
             mailBody.value =  messages['Проректор, отвечающий за финансово-экономическую деятельность*'];
             hiddenInput.value = 'Ссылка на опросный лист для проректора по экономике/руководителя финансовой службы: https://forms.yandex.ru/cloud/6638c0f290fa7b1cc8c93bb4/ ';
-            hiddenInput2.value = 'Ссылка на опросный лист по финансовым показателям: https://forms.yandex.ru/u/662cc5102530c2f2a8619f27/?page=2';
+            hiddenInput2.value = 'Ссылка на опросный лист по финансовым показателям: https://forms.yandex.ru/u/662cc5102530c2f2a8619f27/';
             break;
           default:
             hiddenInput.value = `Ссылка на опросный лист:

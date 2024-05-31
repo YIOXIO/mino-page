@@ -100,7 +100,7 @@
                     <h3 class="map__heading">Место проведения</h3>
                     <h3 class="map__heading">Даты</h3>
                 </article>
-                <ul class="map__list">
+                <ul  class="map__list">
                     <li>
                         <article class="map__card">
                             <h4 class="map__hidden-heading">Федеральный округ</h4>
@@ -396,7 +396,7 @@
             </div>
         </section>
         <section id="contact-section" class="contact">
-            <div class="container">
+            <div class="container container_contact">
                 <article class="contact__container">
                     <article class="contact__wrapper">
                         <h2 class="section-title">Контакты</h2>
@@ -419,7 +419,7 @@
                                 <address class="contact__address"> 
                                     <img class="contact__icon" src="<%=require('./img/icons/phone.svg')%>" alt="">
                                     <article class="contact__phones-wrapper">
-                                         <h3 class="contact__person">Андреева Татьяна Анатольевна</h3>
+                                         <h3 class="contact__person">Андреева Татьяна Анатольевна</h3>""
                                         <a class="contact__tel" href="tel:+1234567890">8(495) 800 12-00, доб.1199</a>
                                         <a class="contact__tel" href="tel:+1234567890">моб. +7(927) 221-45-14</a>
                                     </article>
@@ -428,7 +428,17 @@
                             </li>
                         </ul>
                     </article>
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac8dd2571680dad8f7ca8ee9e57f265a362f56fed963fdfcc3014111b0684da29&amp;source=constructor" width="730" height="460" frameborder="0"></iframe>
+                    <article class="contanct__wrapper">
+                        <img class="contact__map" src="<%=require('./img/map.png')%>" alt="">
+                        <article class="contact__list">
+                            <h3 class="contact__header">Ближайшие станции метро</h3>
+                        <p class="contact__address contact__address_mbe">м. Курская<span class="contact-span">(пешком 15 минут)</span></p>
+                        <p class="contact__address contact__address_mbe">м. Чкаловская<span class="contact-span">(пешком 15 минут)</span></p>
+                        <p class="contact__address contact__address_mbe">м. Чистые пруда<span class="contact-span">(пешком 17 минут или трамвай № А, 3, 39 до остановки «Воронцово поле»)</span></p>
+                        <p class="contact__address contact__address_mbe">м. Тургеневская<span class="contact-span">(пешком 18 минут или трамвай № А, 3, 39 до остановки «Воронцово поле»)</span></p>
+                        <p class="contact__address contact__address_mbe">м. Сретенский бульвар<span class="contact-span">(пешком 17 минут или трамвай № А, 3, 39 до остановки «Воронцово поле»)</span></p>
+                        </article>
+                    </article>
 
                 </article>
             </div>

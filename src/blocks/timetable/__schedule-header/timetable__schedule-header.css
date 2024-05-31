@@ -1,7 +1,14 @@
 
 .timetable__schedule-header{
-    color: #38424F;
-    font-size: 18px;
+    color: #475da7;
+    font-size: 20px;
     font-weight: 700;
     line-height: normal;
+    margin-block-end: 22px;
+    max-inline-size: 660px;
+}
+
+.timetable__schedule-header >span {
+    color: #475da7;
+    font-weight: 500;
 }

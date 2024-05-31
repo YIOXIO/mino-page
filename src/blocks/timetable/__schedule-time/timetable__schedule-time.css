@@ -1,20 +1,17 @@
 .timetable__schedule-time{
-    color: #38424F;
+    color: #28337c;
     font-size: 18px;
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
     inline-size: 100%;
-    padding-block:30px;
-    padding-inline:30px;
-
-    background-color: #EDEDED;
+    /* padding-inline:30px; */
 }
 
 @media (width >=768px){
     .timetable__schedule-time{
     max-inline-size: 197px;
-    padding-inline:10px;
+    /* padding-inline:10px; */
 
     }
 }

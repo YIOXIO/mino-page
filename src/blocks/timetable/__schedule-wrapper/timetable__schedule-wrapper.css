@@ -1,8 +1,15 @@
 .timetable__schedule-wrapper{
     display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding-block:  30px; ;
-    padding-inline-start: 30px;
     flex-basis: 100%;
+    flex-direction: row;
+    gap: 4px;
+    padding-block: 15px;
+    padding-inline: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timetable__schedule-wrapper:first-child{
+    flex-direction: row;
+    gap: 0;
 }

@@ -2,6 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     margin-block-end: 25px;
+    background-color: #EDEDED;
+    align-items: baseline;
 
 }
 @media (width >= 768px){

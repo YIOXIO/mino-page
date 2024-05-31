@@ -1,0 +1,13 @@
+.timetable__schedule-place{
+    color: #38424f;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+@media (width >= 916px){
+    .timetable__schedule-place{
+    text-align: center;
+
+    }
+}

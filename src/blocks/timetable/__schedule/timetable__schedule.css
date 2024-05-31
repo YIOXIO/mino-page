@@ -1,3 +1,7 @@
-.timetable__schedule li:not(:first-child) {
+.timetable__schedule > li:not(:first-child) {
     border-top: 2px solid #E5E5E5;
+}
+
+.timetable__schedule > li:last-child {
+    border-bottom: 2px solid #E5E5E5;
 }

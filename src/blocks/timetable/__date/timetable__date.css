@@ -7,3 +7,11 @@
     text-transform: uppercase;
     margin-block-end: 20px;
 }
+
+
+.timetable__date:nth-child(1){
+    flex-basis: 198px;
+}
+.timetable__date:nth-child(2){
+    flex-grow: 1;
+}

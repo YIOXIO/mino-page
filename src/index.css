@@ -402,3 +402,22 @@ html{
       max-inline-size: 220px;
     }
   }
+
+
+  .container_contact{
+    max-inline-size: 1420px;
+  }
+  .contact__map{
+      max-inline-size: 850px;
+      inline-size: 100%;
+      align-self: baseline;
+    object-fit:cover;
+    margin-block-end: 20px;
+  }
+.contact__address_mbe{
+  margin-block-end: 5px;
+  display:block;
+}
+.contact-span{
+  font-weight: 400;
+}
