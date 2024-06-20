@@ -421,3 +421,15 @@ html{
 .contact-span{
   font-weight: 400;
 }
+
+.hero__info_mbe-0{
+  margin-block-end: 0;
+}
+
+.hero__info_bold{
+  font-weight: 500;
+}
+
+.hero__info_italic{
+  font-style: italic;
+}
