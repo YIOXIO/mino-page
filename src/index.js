@@ -318,6 +318,12 @@ new SlimSelect({
     searchPlaceholder: 'Поиск...',
   }
 });
+new SlimSelect({
+  select: '#foivSelect',
+  settings: {
+    showSearch: false
+  }
+});
 
 
 
