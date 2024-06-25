@@ -65,20 +65,25 @@
     display: none;
     grid-template-columns: minmax(12%,.67fr) 2.55fr clamp(10.063rem,-.823rem + 19.014vw,10.438rem);
     padding-inline: 30px;
-    padding-block: 30px;
-    background-color: #87ceeb78;
+    padding-block: 8px;
+    background-image: linear-gradient(#136eb7,#0e4a8f );
 }
 .timetable__schedule-description_fw-italic{
     font-style: italic;
 }
 .timetable__card{
     display: grid;
-    gap: 35px clamp(1.25rem, -6.223rem + 19.928vw, 8.125rem);
+    gap: 15px clamp(1.25rem, -6.223rem + 19.928vw, 8.125rem);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     min-block-size: 70px;
     padding-block: 15px;
-
+    padding-inline: 25px;
     /* padding-inline-start: clamp(1.25rem, .186rem + 4.255vw, 3.25rem); */
+}
+
+
+.timetable__card:nth-child(2){
+    background-color: #F7F7F7;
 }
 .timetable-span{
     text-align: center;
@@ -99,9 +104,10 @@
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
-    text-align: center;
-    max-inline-size: 1100px;
-    margin-inline: auto;
+    text-align: left;
+    max-inline-size: 900px;
+    margin-inline-end: auto;
+    margin-block-end: 15px;
 }
 
 
@@ -109,36 +115,55 @@
 .timetable__day{
     color: #28337C;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: normal;
     margin-block-end: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 
-.timetable__place > span{
+/* .timetable__place > span{
     color: #475da7;
     font-weight: 600;
-}
+} */
+
+
 .timetable__place{
     color: #38424f;
-    font-weight: 600;
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 400;
     margin-block-end: 20px;
-    padding-inline-start: 10px;
 }
 
 
 
+.timetable__footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-block-end: 80px;
+}
 
+.timetable__footer-text{
+    color: #3F3F3E;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; 
+    text-transform: uppercase;
+}
 
-
-
-
-
-
-
+.timetable__footer-date{
+    color: #475DA7;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 10.45px */
+    text-transform: uppercase;
+}
 
 
 @media (width >= 916px){
@@ -152,9 +177,10 @@
     }
 
     .timetable__card{
-        grid-template-columns: minmax(12%,.67fr) 2.55fr clamp(10.063rem,-.823rem + 19.014vw,10.438rem);
+        grid-template-columns:minmax(12%,.67fr) 2.2fr clamp(10.063rem,-.823rem + 19.014vw,12.138rem);
         gap: 0;
-    padding-inline: 30px ;
+        padding-inline: 0;
+        padding-block: 0;
 
     }
 }

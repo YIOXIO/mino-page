@@ -1,3 +1,9 @@
 .timetable__schedule-description_fw{
     font-weight: 500;
 }
+@media (width >=916px){
+    .timetable__schedule-description_fw{
+        padding-block: 15px;
+        font-style: italic;
+    }
+}

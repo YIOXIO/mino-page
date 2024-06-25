@@ -1,11 +1,11 @@
 
 .timetable__date{
-    color: #28337C;
+    color: #FFF;
     font-size: 24px;
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
-    margin-block-end: 20px;
+    margin-block: 8px;
 }
 
 

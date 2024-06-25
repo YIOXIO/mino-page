@@ -221,7 +221,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div id="step2" class="step" style="display: none;">
                                     <h2 class="form__header">Опросный лист</h2>
                                     <h2>Шаг 2</h2>
@@ -232,7 +231,6 @@
                                     <button type="button" data-prev="1">Назад</button>
                                     <button type="submit">Отправить</button>
                                 </div>
-
                             </div>
                             <div class="tab-content-item" data-content="2">Content 2</div>
                             <div class="tab-content-item" data-content="3">Content 3</div>
@@ -367,5 +365,226 @@
      [submit  class:primary-button class:form__button "Зарегистрироваться и перейти в опросный лист"]
        <p class="policy">[checkbox* checkbox-826 use_label_element "Согласие"] <a class="policy__link" target="_blank" href="/wp-content/uploads/2024/04/Требования_к_согласию_на_обработку_персональных_данных.pdf">Согласие на обработку персональных данных</a></p>
    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+   <h2 class="section-title section-title_margin">Блок 1/10</h2>
+   <p class="form__label form__label_bold">Экономические показатели</p>
+
+
+   [group rectorList]
+   <p class="form__label form__label_description">Процесс формирования планов мероприятий по достижению целевых показателей; планов развития, планов обеспечения текущей деятельности и т.д.</p>
+   [/group]
+   
+   
+   [group StrategyProrectorList]
+   <h3 class="form__label form__label_bold"> В текущем блоке приводятся:</h3>  
+   <ol>
+        <li>
+            <p class="form__label form__order-list"> общий объем расходов на развитие вуза по
+   направлениям реализации программы развития;</p>
+        </li>
+        <li>
+            <p class="form__label form__order-list">  финансовое обеспечение программы развития;</p>
+        </li>
+        <li>
+            <p class="form__label form__order-list"> сведения о доходах и операционном результате. Фактические данные указываются за 2021-2023 годы.</p>
+        </li>
+   </ol>
+   <h3 class="form__label form__label_bold">1. Объем инвестиций (С1), руб.</h3>
+   
+       <ul class="form__list form__list_quiz">
+           <li>
+               <label class="form__label" for="answer_proStrat-1-1">С1 - 2021</label>
+               [text* answer_proStrat-1-1  class:form__input ]
+           </li>
+         <li>
+               <label class="form__label" for="answer_proStrat-1-2">С1 - 2022</label>
+               [text* answer_proStrat-1-2  class:form__input ]
+           </li>
+         <li>
+               <label class="form__label" for="answer_proStrat-1-3">С1 - 2023</label>
+               [text* answer_proStrat-1-3  class:form__input ]
+           </li>
+         <li>
+               <label class="form__label" for="answer_proStrat-1-4">С1 - 2030</label>
+               [text* answer_proStrat-1-4  class:form__input ]
+               <p class="form__mark">Ожидаемые значения на 2030 год – в соответствии с программой стратегического развития</p>
+           </li>
+       </ul>
+   
+   <h3 class="form__label form__label_bold">2. Темп роста инвестиций (С2), %.</h3>
+       <ul class="form__list form__list_quiz">
+           <li>
+               <label class="form__label" for="answer_proStrat-2-1">С1 - 2021</label>
+               [text* answer_proStrat-2-1  class:form__input ]
+           </li>
+         <li>
+               <label class="form__label" for="answer_proStrat-2-2">С1 - 2022</label>
+               [text* answer_proStrat-2-2  class:form__input ]
+           </li>
+         <li>
+               <label class="form__label" for="answer_proStrat-2-3">С1 - 2023</label>
+               [text* answer_proStrat-2-3  class:form__input ]
+           </li>
+         <li>
+               <label class="form__label" for="answer_proStrat-2-4">С1 - 2030</label>
+               [text* answer_proStrat-2-4  class:form__input ]
+               <p class="form__mark">Ожидаемые значения на 2030 год – в соответствии с программой стратегического развития</p>
+
+           </li>
+       </ul>
+
+          
+   <h3 class="form__label form__label_bold">3. Доля обеспеченности программы стратегического развития денежными средствами (С3), %.</h3>
+   <ul class="form__list form__list_quiz">
+       <li>
+           <label class="form__label" for="answer_proStrat-3-1">С1 - 2021</label>
+           [text* answer_proStrat-3-1  class:form__input ]
+       </li>
+     <li>
+           <label class="form__label" for="answer_proStrat-3-2">С1 - 2022</label>
+           [text* answer_proStrat-3-2  class:form__input ]
+       </li>
+     <li>
+           <label class="form__label" for="answer_proStrat-3-3">С1 - 2023</label>
+           [text* answer_proStrat-3-3  class:form__input ]
+       </li>
+     <li>
+           <label class="form__label" for="answer_proStrat-3-4">С1 - 2030</label>
+           [text* answer_proStrat-3-4  class:form__input ]
+           <p class="form__mark">Ожидаемые значения на 2030 год – в соответствии с программой стратегического развития</p>
+
+       </li>
+   </ul>
+   
+   
+   [/group]
+
+
+   [group FinanceProrectorList]
+   <h3 class="form__label form__label_bold"> В текущем блоке приводятся:</h3>  
+   <ol>
+        <li>
+            <p class="form__label form__order-list"> общий объем расходов на развитие вуза по
+   направлениям реализации программы развития;</p>
+        </li>
+        <li>
+            <p class="form__label form__order-list">  финансовое обеспечение программы развития;</p>
+        </li>
+        <li>
+            <p class="form__label form__order-list"> сведения о доходах и операционном результате. Фактические данные указываются за 2021-2023 годы.</p>
+        </li>
+   </ol>
+   <h3 class="form__label form__label_bold">1. Доходы (без целевых средств) (П1), руб.</h3>
+    <p class="form__label form__label_description">Формула расчета: <br>
+        конс. ф. 0503721: доходы КФО 4 (строка 040 (код аналитики 130) графа 5) + доходы КФО 2 (строка 010 (код аналитики 100) графа 6)</p>
+       <ul class="form__list form__list_quiz">
+           <li>
+               <label class="form__label" for="answer_proFin-1-1">П1 - 2021</label>
+               [text* answer_proFin-1-1  class:form__input ]
+           </li>
+         <li>
+               <label class="form__label" for="answer_proFin-1-2">П1 - 2022</label>
+               [text* answer_proFin-1-2  class:form__input ]
+           </li>
+         <li>
+               <label class="form__label" for="answer_proFin-1-3">П1 - 2023</label>
+               [text* answer_proFin-1-3  class:form__input ]
+           </li>
+         <li>
+               <label class="form__label" for="answer_proFin-1-4">П1 - 2030</label>
+               [text* answer_proFin-1-4  class:form__input ]
+               <p class="form__mark">Ожидаемые значения на 2030 год – в соответствии с программой стратегического развития</p>
+           </li>
+       </ul>
+   
+   <h3 class="form__label form__label_bold">2. Доходы (без целевых средств) на 1 НПР (П2), руб.</h3>
+   <p class="form__label form__label_description">Формула расчета: <br>
+    конс. ф. 0503721: (доходы КФО 4 (строка 040 (код аналитики 130) графа 5) + доходы КФО 2 (строка 010 (код аналитики 100) и графа 6)) / численность ППС и НР (ф. ЗП-Образование свод с филиалами: графа 1 (строка 17 + строка 19))</p>
+       <ul class="form__list form__list_quiz">
+           <li>
+               <label class="form__label" for="answer_proFin-2-1">П2 - 2021</label>
+               [text* answer_proFin-2-1  class:form__input ]
+           </li>
+         <li>
+               <label class="form__label" for="answer_proFin-2-2">П2 - 2022</label>
+               [text* answer_proFin-2-2  class:form__input ]
+           </li>
+         <li>
+               <label class="form__label" for="answer_proFin-2-3">П2 - 2023</label>
+               [text* answer_proFin-2-3  class:form__input ]
+           </li>
+         <li>
+               <label class="form__label" for="answer_proFin-2-4">П2 - 2030</label>
+               [text* answer_proFin-2-4  class:form__input ]
+               <p class="form__mark">Ожидаемые значения на 2030 год – в соответствии с программой стратегического развития</p>
+
+           </li>
+       </ul>
+
+          
+   <h3 class="form__label form__label_bold">3. Операционный результат (без целевых средств) (П3), руб.</h3>
+   <p class="form__label form__label_description">Формула расчета: <br>
+    конс. ф. 0503721: доходы КФО 4 (строка 040 (код аналитики 130) графа 5) - расходы КФО 4 (строка 150 (код аналитики 200) графа 5) + доходы КФО 2 (строка 010 (код аналитики 100) графа 6) - расходы КФО 2 (строка 150 (код аналитики 200) графа 6)</p>
+   <ul class="form__list form__list_quiz">
+       <li>
+           <label class="form__label" for="answer_proFin-3-1">П3 - 2021</label>
+           [text* answer_proFin-3-1  class:form__input ]
+       </li>
+     <li>
+           <label class="form__label" for="answer_proFin-3-2">П3 - 2022</label>
+           [text* answer_proFin-3-2  class:form__input ]
+       </li>
+     <li>
+           <label class="form__label" for="answer_proFin-3-3">П3 - 2023</label>
+           [text* answer_proFin-3-3  class:form__input ]
+       </li>
+     <li>
+           <label class="form__label" for="answer_proFin-3-4">П3 - 2030</label>
+           [text* answer_proFin-3-4  class:form__input ]
+           <p class="form__mark">Ожидаемые значения на 2030 год – в соответствии с программой стратегического развития</p>
+
+       </li>
+   </ul>
+
+
+
+   <h3 class="form__label form__label_bold">4. Операционный результат (без целевых средств) на 1 НПР (П4), руб.</h3>
+   <p class="form__label form__label_description">Формула расчета: <br>
+    конс. ф. 0503721: доходы КФО 4 (строка 040 (код аналитики 130) графа 5) - расходы КФО 4 (строка 150 (код аналитики 200) графа 5) + доходы КФО 2 (строка 010 (код аналитики 100) графа 6) - расходы КФО 2 (строка 150 (код аналитики 200) графа 6) / численность ППС и НР (ф. ЗП-Образование свод с филиалами: графа 1 (строка 17 + строка 19))</p>
+   <ul class="form__list form__list_quiz">
+       <li>
+           <label class="form__label" for="answer_proFin-4-1">П4 - 2021</label>
+           [text* answer_proFin-4-1  class:form__input ]
+       </li>
+     <li>
+           <label class="form__label" for="answer_proFin-3-2">П4 - 2022</label>
+           [text* answer_proFin-4-2  class:form__input ]
+       </li>
+     <li>
+           <label class="form__label" for="answer_proFin-4-3">П4 - 2023</label>
+           [text* answer_proFin-4-3  class:form__input ]
+       </li>
+     <li>
+           <label class="form__label" for="answer_proFin-4-4">П4 - 2030</label>
+           [text* answer_proFin-4-4  class:form__input ]
+           <p class="form__mark">Ожидаемые значения на 2030 год – в соответствии с программой стратегического развития</p>
+
+       </li>
+   </ul>
+   
+   
+   [/group]
+   
+
 
 </div>

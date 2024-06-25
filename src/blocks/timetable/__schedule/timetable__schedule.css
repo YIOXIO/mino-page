@@ -5,3 +5,15 @@
 .timetable__schedule > li:last-child {
     border-bottom: 2px solid #E5E5E5;
 }
+
+.timetable__schedule > li:nth-child(odd){
+    background-color: #F7F7F7;
+}
+
+
+@media (width >=916px){
+    .timetable__schedule > li > .timetable__card >  article{
+        padding-block: 15px ;
+    }
+    
+}

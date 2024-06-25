@@ -5,13 +5,21 @@
     line-height: normal;
     text-transform: uppercase;
     inline-size: 100%;
-    /* padding-inline:30px; */
+
 }
 
 @media (width >=768px){
     .timetable__schedule-time{
     max-inline-size: 197px;
-    /* padding-inline:10px; */
 
+
+    }
+}
+
+@media (width >= 916px){
+    .timetable__schedule-time{
+        padding-inline:30px;
+        padding-block: 15px;
+        background-color: #EDEDED;
     }
 }

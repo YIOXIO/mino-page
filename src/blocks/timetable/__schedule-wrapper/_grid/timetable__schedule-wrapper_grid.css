@@ -1,4 +1,18 @@
 .timetable__schedule-wrapper_grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    padding-inline:0 ;
+}
+
+
+.timetable__schedule-wrapper_grid > li{
+    list-style-type: none;
+    inline-size: fit-content;
+}
+
+
+.timetable__schedule-wrapper_grid > li > .timetable__schedule-header{
+    max-inline-size: 230px;
+    margin-block-end: 10px;
+
 }

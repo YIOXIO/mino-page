@@ -3,11 +3,14 @@
     font-size: 18px;
     font-weight: 500;
     line-height: normal;
+    
 }
 
 @media (width >= 916px){
     .timetable__schedule-place{
     text-align: center;
-
+    padding-inline:30px;
+    padding-block: 15px;
+    background-color: #EDEDED;
     }
 }

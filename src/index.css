@@ -433,3 +433,11 @@ html{
 .hero__info_italic{
   font-style: italic;
 }
+
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
