@@ -21,5 +21,8 @@
         padding-inline:30px;
         padding-block: 15px;
         background-color: #EDEDED;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }

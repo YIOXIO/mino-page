@@ -6,6 +6,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     entry: {
         main: './src/index.js',
+        registration: './src/registration.js',
+        registration_foiv: './src/registration-foiv.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -56,6 +58,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'form.html',
             template: './src/form.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'previous-events.html',
+            template: './src/previous-events.html'
         }),
 
         new CleanWebpackPlugin(),

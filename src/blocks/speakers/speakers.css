@@ -1,4 +1,5 @@
 @import './__card/speakers__card.css';
+@import './__card/_previous/speakers__card_previous.css';
 @import './__duty/speakers__duty.css';
 @import './__img/speakers__img.css';
 @import './__name/speakers__name.css';

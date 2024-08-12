@@ -1,0 +1,225 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Программа мероприятий</title>
+</head>
+
+<body class="root">
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <article class="header__container">
+                    <ul class="header__nav-list header__nav-list_grid">
+                        <li>
+                            <a class="header__nav-link" href="/">
+                                <img class="header__logo" src="<%=require('./img/icons/logo.svg')%>" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="header__nav-link" href="/">
+                                <img class="header__logo" src="<%=require('./img/icons/mon-logo.svg')%>" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="header__nav-link_bold" href="/">Семинары-совещания <br />
+                                в формате стратегической<br />
+                                сессии</a>
+                        </li>
+                    </ul>
+                    <div class="burger-menu">
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
+                    </div>
+
+                    <ul class="header__nav-list side-navbar">
+                        <li>
+                            <a class="header__nav-link" href="/">О стратегической сессии</a>
+                        </li>
+                        <li>
+                            <a class="header__nav-link" href="#programm-section">Программа</a>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <a class=" header__nav-link header__nav-link_anchor header__dropdown-button ">Информация о проведенных мероприятиях</a>
+                                <div class="dropdown-content">
+                                  <a href="#">Москва</a>
+                
+                                </div>
+                              </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="primary-button header__nav-link header__dropdown-button ">Зарегистрироваться</button>
+                                <div class="dropdown-content">
+                                  <a href="#">Регистрация вузов</a>
+                                  <a href="#">Регистрация ФОИВ</a>
+                                </div>
+                              </div>
+                        </li>
+                        <li>
+                            <a class="header__nav-link" href="#contact-section">Контакты</a>
+                        </li>
+                    </ul>
+                </article>
+            </nav>
+        </div>
+    </header>
+
+    <main class="mon-main">
+        <section class="previous">
+
+                <section class="hero ">
+                    <div class="container">
+                        <article class="hero__container">
+                            <div class="hero__flex">
+                                <article class="hero__wrapper-grid">
+                                    <h3 class="hero__text">Семинары-совещания в формате стратегической сессии</h3>
+                                    <h1 class="hero__title ">Стратегическое развитие университетов: </h1>
+                                    <h2 class="hero__subtitle ">трансформация финансовой модели
+                                    </h2>
+                                </article>
+                                <p class="hero__date ">3-4 <span class=" hero__date hero__date_span">июня</span> 2024</p>
+                            </div>
+                            <p class="contact__header">Площадка проведения мероприятия</p>
+                            <address class="contact__address"> <img class="contact__icon" src="<%=require('./img/icons/home-icon.svg')%>" alt="">Культурный Центр НИУ ВШЭ</address>
+                            <p class="contact__header">Адрес</p>
+                            <address class="contact__address"> <img class="contact__icon" src="<%=require('./img/icons/pointer-icon.svg')%>" alt="">Покровский бульвар, д.11, корпус 6</address>
+                        </article>
+                    </div>
+                </section>
+                <section class="previous-speakers ">
+                    <div class="container">
+                        <h2 class="section-title">Спикеры конференции</h2>
+                        <article class="" >
+                            <ul class="previous-list">
+                                <li class="">  
+                                                <article class="speakers__card speakers__card_previous">
+                                                    <article class="speakers__img-wrapper">
+                                                        <img class="speakers__img" src="<%=require('./img/speakers/omelchuk.jpg')%>" alt="">
+                                                    </article>
+                                                    <article class="speakers__wrapper">
+                                                        <h3 class="speakers__name">Андрей Омельчук</h3>
+                                                        <p class="speakers__duty">Заместитель Министра науки и высшего образования Российской Федерации</p>
+                                                        <p class="speakers__theme">Тема: «Переход от модели управления ресурсами университета к модели создания ценности»</p>
+                                                    </article>
+                                                </article>
+                                </li>
+                                <li class="">  
+                                                <article class="speakers__card speakers__card_previous">
+                                                    <article class="speakers__img-wrapper">
+                                                        <img class="speakers__img" src="<%=require('./img/speakers/kadonchikov.jpg')%>" alt="">                     
+                                                    </article>
+                                                    <article class="speakers__wrapper">
+                                                        <h3 class="speakers__name">Павел Кадочников</h3>
+                                                        <p class="speakers__duty">Заместитель Министра финансов Российской Федерации</p>
+                                                        <p class="speakers__theme">Тема: «уточняется»</p>
+                                                    </article>
+                                                </article>
+                                </li>
+        
+                                <li class="">  
+                                                <article class="speakers__card speakers__card_previous">
+                                                    <article class="speakers__img-wrapper">
+                                                        <img class="speakers__img" src="<%=require('./img/speakers/kanukaev.jpg')%>" alt="">                     
+                                               
+                                                    </article>
+                                                    <article class="speakers__wrapper">
+                                                        <h3 class="speakers__name">Аслан Канукоев</h3>
+                                                        <p class="speakers__duty">Директор Департамента экономической политики Министерства науки и высшего образования Российской Федерации</p>
+                                                        <p class="speakers__theme">Тема: «Финансовая служба - ключевой партнер в системе управления вуза»</p>
+                                                    </article>
+                                                </article>
+                                </li>
+                                <li class="">  
+                                                <article class="speakers__card speakers__card_previous">
+                                                    <article class="speakers__img-wrapper">
+                                               
+                                                    </article>
+                                                    <article class="speakers__wrapper">
+                                                        <h3 class="speakers__name">ФИО уточняется </h3>
+                                                        <p class="speakers__duty">Руководитель ТОП-уровня ГК «Газпромнефть»</p>
+                                                        <p class="speakers__theme">Тема: «Коммерциализация РИД: миссия выполнима»</p>
+                                                    </article>
+                                                </article>
+                                </li>
+                                <li class="">  
+                                                <article class="speakers__card speakers__card_previous">
+                                                    <article class="speakers__img-wrapper">
+                                                        <img class="speakers__img" src="<%=require('./img/speakers/sarahanyan.png')%>" alt="">                     
+                                               
+                                                    </article>
+                                                    <article class="speakers__wrapper">
+                                                        <h3 class="speakers__name">Самвел Саруханян</h3>
+                                                        <p class="speakers__duty">Генеральный директор Mariya Resort & Spa</p>
+                                                        <p class="speakers__theme">Тема: «Организация бизнес-процессов с акцентом на человека (человекоцентричность)»</p>
+                                                    </article>
+                                                </article>
+                                </li>
+                                <li class="">  
+                                                <article class="speakers__card speakers__card_previous">
+                                                    <article class="speakers__img-wrapper">
+                                               
+                                                    </article>
+                                                    <article class="speakers__wrapper">
+                                                        <h3 class="speakers__name">ФИО уточняется</h3>
+                                                        <p class="speakers__duty">Руководитель ТОП-уровня венчурного фонда «Восход»</p>
+                                                        <p class="speakers__theme">Тема: «Инвестиционный портфель: как создавать и управлять»</p>
+                                                    </article>
+                                                </article>
+                                </li>
+                                <li class="">  
+                                                <article class="speakers__card speakers__card_previous">
+                                                    <article class="speakers__img-wrapper">
+                                               
+                                                    </article>
+                                                    <article class="speakers__wrapper">
+                                                        <h3 class="speakers__name">ФИО уточняется</h3>
+                                                        <p class="speakers__duty">Представитель регионального органа власти</p>
+                                                        <p class="speakers__theme">Тема «Регион - партнер вуза и его основной потребитель»</p>
+                                                    </article>
+                                                </article>
+                                </li>                                              
+                        </ul>
+                        </article>
+                    </div>
+                </section>
+                <section class="previous-video">
+                    <div class="container">
+                        <h2 class="section-title">о мероприятии </h2>
+                        <video class="previous-video__palyer" controls>
+                            <source src="https://youtu.be/MPT8B3yWPn0" type="video/mp4">
+                            Извините, но ваш браузер не поддерживает проигрывание видео 
+                          </video>
+                    </div>
+                </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li>
+                        <a class="footer__nav-link" href="/">
+                            <img class="footer__logo" src="<%=require('./img/icons/logo.svg')%>" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer__nav-link" href="/">
+                            <img class="footer__logo" src="<%=require('./img/icons/mon-logo_footer.svg')%>" alt="" />
+                        </a>
+                        <a class="footer__nav-link footer__nav-link_bold" href="/">Семинары-совещания <br />
+                            в формате стратегической<br />
+                            сессии</a>
+                    </li>
+                </ul>
+            </nav>
+ 
+            <article class="footer__wrapper">
+                <p class="footer__text">МОСКВА 25 - 26.04.2024</p>
+            </article>
+        </div>
+
+    </footer>
+</body>

@@ -1,61 +1,3 @@
-// var messages = {
-
-//   'Ректор': `Просим Вас до 05.07.2024 г. заполнить опросный лист для ректора, пройдя по ссылке.
-  
-//     Обращаем внимание, что результаты опроса не предназначены для оценки эффективности и качества работы вуза в целом, его отдельных служб или сотрудников.
-
-//     Опрос направлен исключительно на изучение возможных типов коммуникации в управленческих командах университетов. 
-
-//     При заполнении опросного листа рекомендуем опираться только на собственный опыт и знания. 
-
-//     Результаты опроса будут использованы в рамках работы проектных групп на стратегической сессии.   
-
-//     Также обращаем внимание, что проведенный опрос будет иметь практическую ценность для управленческой команды университета только в том случае, если каждый участник заполнит опросный лист самостоятельно и независимо от других участников.   
-
-//     Спасибо за Ваше участие и вовлеченность! 
-//   `,
-  
-//     'Проректор, отвечающий за вопросы стратегического развития*': `
-  
-//     В рамках опроса Вам предлагается заполнить опросный лист для проректора по развитию/руководителя стратегической службы.  
-
-//     Обращаем внимание, что результаты опроса не предназначены для оценки эффективности и качества работы вуза в целом, его отдельных служб или сотрудников.  
-
-//     Опрос направлен исключительно на изучение возможных типов коммуникации в управленческих командах университетов. 
-
-//     При заполнении опросного листа рекомендуем опираться только на собственный опыт и знания. 
-
-//     Результаты опроса будут использованы в рамках работы проектных групп на стратегической сессии, а также представлены ректору университета.   
-    
-//     Также обращаем внимание, что проведенный опрос будет иметь практическую ценность для управленческой команды университета только в том случае, если каждый участник заполнит опросный лист самостоятельно и независимо от других участников.   
-
-//     Спасибо за ваше участие и вовлеченность! 
-//     `,
-  
-//     'Проректор, отвечающий за финансово-экономическую деятельность*': `
-
-//     Просим Вас до 05.07.2024 г. заполнить 2 разных опросных листа:  
-//     - опросный лист для проректора по экономике/руководителя финансовой службы; 
-//     - опросный лист по финансовым показателям университета. 
-  
-//     Обращаем внимание, что результаты опроса не предназначены для оценки эффективности и качества работы вуза в целом, его отдельных служб или сотрудников.  
-  
-//     Опрос направлен исключительно на изучение возможных типов коммуникации в управленческих командах университетов. 
-  
-//     При заполнении опросного листа для проректора по экономике/руководителя финансовой службы рекомендуем опираться только на собственный опыт и знания. 
-  
-//     Результаты опроса будут использованы в рамках работы проектных групп на стратегической сессии, а также представлены ректору университета.  
-  
-//     В опросном листе по финансовым показателям университета данные необходимо заполнить в соответствии с официальными формами отчетности. Опросный лист может быть передан иному ответственному лицу для заполнения. 
-  
-//     Также обращаем внимание, что проведенный опрос будет иметь практическую ценность для управленческой команды университета только в том случае, если каждый участник заполнит опросный лист самостоятельно и независимо от других участников.   
-  
-//     Спасибо за Ваше участие и вовлеченность! `,
-//   }
-  
-  
-
-
 import './index.css'
 
 import Swiper from 'swiper/bundle';
@@ -101,7 +43,7 @@ const swiper = new Swiper('.sample-slider', {
 })
 
 
-var speakers = new Swiper('.speakers__slider', {
+let speakers = new Swiper('.speakers__slider', {
   grabCursor: true,
   loop: true,
   speed: 2000,
@@ -143,8 +85,6 @@ var speakers = new Swiper('.speakers__slider', {
     invert: false,
   },
 });
-
-
 
 
 
@@ -199,117 +139,42 @@ burgerMenu.addEventListener('click', function () {
 // __________
 
 
-// Динамическое содержание письма
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   var radioButtons = document.querySelectorAll('input[name="radio-708"]');
-//   var hiddenInput = document.querySelector('input[name="hidden-link"]');
-//   var hiddenInput2 = document.querySelector('input[name="hidden-link2"]');
-//   var mailBody = document.querySelector('input[name="hidden-mailBody"]');
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdownButtons = document.querySelectorAll('.header__dropdown-button');
+  const dropdownMenus = document.querySelectorAll('.dropdown-content');
 
-//   if (radioButtons && hiddenInput) {
-//     radioButtons.forEach(function (radio) {
-//       radio.addEventListener('change', function () {
-//         var value = this.value;
-//         switch (value) {
-//           case 'Ректор':
-//             mailBody.value = messages['Ректор'];
-//             hiddenInput.value = `Ссылка на опросный лист:
-//              https://forms.yandex.ru/cloud/662d12c4eb6146f9c06f47e7/`;
-//             hiddenInput2.value = ''
-//             break;
-//           case 'Проректор, отвечающий за вопросы стратегического развития*':
-//             mailBody.value = messages['Проректор, отвечающий за вопросы стратегического развития*'];
-//             hiddenInput.value = `Ссылка на опросный лист: 
-//             https://forms.yandex.ru/cloud/6638b6df068ff0179ca71bf2/`;
-//             hiddenInput2.value = ''
-//             break;
-//           case 'Проректор, отвечающий за финансово-экономическую деятельность*':
-//             mailBody.value =  messages['Проректор, отвечающий за финансово-экономическую деятельность*'];
-//             hiddenInput.value = 'Ссылка на опросный лист для проректора по экономике/руководителя финансовой службы: https://forms.yandex.ru/cloud/6638c0f290fa7b1cc8c93bb4/ ';
-//             hiddenInput2.value = 'Ссылка на опросный лист по финансовым показателям: https://forms.yandex.ru/u/662cc5102530c2f2a8619f27/';
-//             break;
-//           default:
-//             hiddenInput.value = `Ссылка на опросный лист:
-//             https://forms.yandex.ru/cloud/662d12c4eb6146f9c06f47e7/`;
-//             mailBody.value = messages['Ректор']
-//             break;
-//         }
-//       });
-//     });
-//   }
-// });
-
-
-const popup = document.querySelector('.popup');
-const buttonClosePopup = document.querySelector('.popup__close');
-
-function openPopup(popupElement) {
-  popupElement.classList.add('popup_is_active');
-  popupElement.addEventListener('click', handleOverlayClosePopup);
-  document.addEventListener('keydown', handleEscClosePopup);
-}
-
-function closePopup(popupElement) {
-  popupElement.classList.remove('popup_is_active');
-  popupElement.removeEventListener('click', handleOverlayClosePopup);
-  document.removeEventListener('keydown', handleEscClosePopup);
-}
-
-function handleOverlayClosePopup(evt) {
-  if (evt.target === evt.currentTarget) {
-    closePopup(evt.currentTarget);
+  function toggleDropdown(menu) {
+    menu.classList.toggle('active');
   }
-}
 
-function handleEscClosePopup(evt) {
-  if (evt.key === 'Escape') {
-    closePopup(document.querySelector('.popup_is_active'));
-  }
-}
+  dropdownButtons.forEach((button, index) => {
+    button.addEventListener('click', (event) => {
+      toggleDropdown(dropdownMenus[index]);
+      button.classList.toggle('header__dropdown-button_active');
+    });
+  });
 
-if (buttonClosePopup) {
-  buttonClosePopup.addEventListener('click', () => closePopup(popup));
-}
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownMenus.forEach(menu => {
+        menu.classList.remove('active');
+      });
+      dropdownButtons.forEach(button => {
+        button.classList.remove('header__dropdown-button_active');
+      });
+    }
+  });
 
-document.addEventListener('wpcf7mailsent', function (event) {
-  var successPopup = document.querySelector('.popup__success');
-  openPopup(successPopup);
-}, false);
-
-document.addEventListener('wpcf7mailfailed', function (event) {
-  var errorPopup = document.querySelector('.popup__error');
-  openPopup(errorPopup);
-}, false);
-
-
-
-
-
-const dropdownButton = document.querySelector('.dropdown'),
- dropdownMenu = document.querySelector('.dropdown-content'),
- headerDropdownButton = document.querySelector('.header__dropdown-button')
-
-dropdownButton.addEventListener('click', ()=> {
-  dropdownMenu.classList.toggle('active')
-  headerDropdownButton.classList.toggle('header__dropdown-button_active')
-})
-
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape') {
-    dropdownMenu.classList.remove('active')
-    headerDropdownButton.classList.remove('header__dropdown-button_active')
-  }
-})
-
-document.addEventListener('click', function(event) {
-  if (!dropdownButton.contains(event.target)) {
-    dropdownMenu.classList.remove('active')
-    headerDropdownButton.classList.remove('header__dropdown-button_active')
-  }
-})
-
-
+  document.addEventListener('click', function (event) {
+    dropdownButtons.forEach((button, index) => {
+      if (!button.contains(event.target)) {
+        dropdownMenus[index].classList.remove('active');
+        button.classList.remove('header__dropdown-button_active');
+      }
+    });
+  });
+});
 
 new SlimSelect({
   select: '#finSelect',
@@ -321,49 +186,14 @@ new SlimSelect({
 new SlimSelect({
   select: '#foivSelect',
   settings: {
-    showSearch: false
+    searchText: 'Ничего не найдено',
+    searchPlaceholder: 'Поиск...',
+  }
+});
+new SlimSelect({
+  select: '#dutySelect',
+  settings: {
+    showSearch: false,
   }
 });
 
-
-
-// ТАБЫ
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   const steps = document.querySelectorAll('.step');
-//   const nextButtons = document.querySelectorAll('[data-next]');
-//   const prevButtons = document.querySelectorAll('[data-prev]');
-
-//   nextButtons.forEach(button => {
-//       button.addEventListener('click', function() {
-//           const nextStep = this.getAttribute('data-next');
-//           showStep(nextStep);
-//       });
-//   });
-
-//   prevButtons.forEach(button => {
-//       button.addEventListener('click', function() {
-//           const prevStep = this.getAttribute('data-prev');
-//           showStep(prevStep);
-//       });
-//   });
-
-//   function showStep(stepNumber) {
-//       steps.forEach(step => {
-//           step.style.display = 'none';
-//       });
-
-//       const stepToShow = document.getElementById(`step${stepNumber}`);
-//       if (stepToShow) {
-//           stepToShow.style.display = 'block';
-//       }
-//   }
-// });
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   const inputElement = document.querySelector('.input-pointer'); // Выбираем элемент ввода по его классу
-//   if (inputElement) {
-//     inputElement.setAttribute('tabindex', '-1'); // Устанавливаем значение tabindex="-1"
-//   }
-// });
