@@ -7,11 +7,12 @@ module.exports = {
     entry: {
         main: './src/index.js',
         registration: './src/registration.js',
-        registration_foiv: './src/registration-foiv.js'
+        registration_foiv: './src/registration-foiv.js',
+        yaMap: './src/yaMap.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[contenthash].js', // Для генерации уникальных имена файлов
+        filename: '[name].js', // Для генерации уникальных имена файлов
         publicPath: ''
     },
 
@@ -31,7 +32,7 @@ module.exports = {
                 exclude: '/node_modules'
             },
             {
-                test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
+                test: /\.(png|avif|webp|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
                 type: 'asset/resource'
             },
             {

@@ -472,15 +472,13 @@
                     </a>
                 </article>
             </div>  
-        <div class="popup popup__success popup_is_animated">
-            <div class="popup__content">
-                    <article class="success">
-                        <div class="success__container">
-                        <span class="popup__close"></span>
-                            <h2 class="success__message"></h2>
-                            <img class="success-icon" src="<%=require('./img/icons/succecss-icon.png')%>" alt="">
-                        </div>
-                    </article>
+        <div class="popup popup__map popup_is_animated popup_is_active">
+            <div class="popup__content popup__content_inline">
+                <picture class="map-dvfu">
+                    <source srcset="<%=require('./img/map-dvfu.avif')%>" type="image/avif">
+                    <source srcset="<%=require('./img/map-dvfu.webp')%>" type="image/webp">
+                    <img class="popup__image" src="<%=require('./img/map-dvfu.jpg')%>" alt="Карта кампуса ДВФУ ">
+                </picture>
               </div>
         </div>
         <div class="popup popup__error popup_is_animated ">

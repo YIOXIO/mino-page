@@ -482,3 +482,15 @@ html{
   inline-size: 100%;
   max-block-size: 675px;
 }
+
+.popup__image {
+  transform-origin: 50% 50%;
+  max-block-size: 800px;
+  max-inline-size: 1200px;
+  object-fit: cover;
+  inline-size: 100%;
+  block-size: 100%;
+}
+.popup__content_inline{
+  max-inline-size: 1200px;
+}

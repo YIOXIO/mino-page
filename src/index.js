@@ -3,7 +3,8 @@ import './index.css'
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import SlimSelect from 'slim-select'
-
+const popup = document.querySelector('.popup');
+const buttonClosePopup = document.querySelector('.popup__close');
 
 const swiper = new Swiper('.sample-slider', {
   loop: false,
@@ -140,7 +141,7 @@ burgerMenu.addEventListener('click', function () {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const dropdownButtons = document.querySelectorAll('.header__dropdown-button');
   const dropdownMenus = document.querySelectorAll('.dropdown-content');
 
@@ -190,10 +191,156 @@ new SlimSelect({
     searchPlaceholder: 'Поиск...',
   }
 });
+
 new SlimSelect({
   select: '#dutySelect',
   settings: {
     showSearch: false,
   }
 });
+
+
+
+
+function openPopup(popupElement) {
+  popupElement.classList.add('popup_is_active');
+  popupElement.addEventListener('click', handleOverlayClosePopup);
+  document.addEventListener('keydown', handleEscClosePopup);
+}
+
+function closePopup(popupElement) {
+  popupElement.classList.remove('popup_is_active');
+  popupElement.removeEventListener('click', handleOverlayClosePopup);
+  document.removeEventListener('keydown', handleEscClosePopup);
+}
+
+function handleOverlayClosePopup(evt) {
+  if (evt.target === evt.currentTarget) {
+    closePopup(evt.currentTarget);
+  }
+}
+
+function handleEscClosePopup(evt) {
+  if (evt.key === 'Escape') {
+    closePopup(document.querySelector('.popup_is_active'));
+  }
+}
+
+if (buttonClosePopup) {
+  buttonClosePopup.addEventListener('click', () => closePopup(popup));
+}
+
+const buttonMapOpenPopup = document.querySelector('.primary-button_map');
+
+if(buttonMapOpenPopup){
+  buttonMapOpenPopup.addEventListener('click', () => {
+    let mapPopup = document.querySelector('.popup__map')
+    openPopup(mapPopup)
+  })
+} 
+
+
+
+const popupImage = document.querySelector('.popup__image');
+
+let zoomLevel = 1;
+const zoomStep = 0.1;
+
+let isDragging = false;
+let startX, startY;
+let translateX = 0, translateY = 0;
+
+const maxTranslateX = window.innerWidth * 0.2;
+const minTranslateX = -window.innerWidth * 0.2;
+const maxTranslateY = window.innerHeight * 0.2;
+const minTranslateY = -window.innerHeight * 0.2;
+
+popupImage.style.cursor = 'grab';
+popupImage.style.transform = 'translate(0px, 0px)';
+
+popupImage.addEventListener('wheel', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (event.deltaY < 0) {
+        // Scroll up - zoom in
+        zoomLevel += zoomStep;
+    } else {
+        // Scroll down - zoom out
+        zoomLevel -= zoomStep;
+        if (zoomLevel < 1) zoomLevel = 1; // Prevent zooming out below original size
+    }
+
+    // Adjust translation to keep image within bounds
+    let newTranslateX = translateX;
+    let newTranslateY = translateY;
+
+    if (translateX > maxTranslateX) {
+        newTranslateX = maxTranslateX;
+    } else if (translateX < minTranslateX) {
+        newTranslateX = minTranslateX;
+    }
+
+    if (translateY > maxTranslateY) {
+        newTranslateY = maxTranslateY;
+    } else if (translateY < minTranslateY) {
+        newTranslateY = minTranslateY;
+    }
+
+    popupImage.style.transform = `scale(${zoomLevel}) translate(${newTranslateX}px, ${newTranslateY}px)`;
+});
+
+popupImage.addEventListener('mousedown', (event) => {
+    if (event.button !== 0) return; // Only allow left mouse button
+    event.stopPropagation();
+
+    isDragging = true;
+    startX = event.clientX - translateX;
+    startY = event.clientY - translateY;
+    popupImage.style.cursor = 'grabbing';
+    console.log('mousedown', isDragging, startX, startY);
+});
+
+popupImage.addEventListener('mousemove', (event) => {
+    if (!isDragging) return;
+    event.stopPropagation();
+
+    const dx = event.clientX - startX;
+    const dy = event.clientY - startY;
+
+    let newTranslateX = dx;
+    let newTranslateY = dy;
+
+    // Adjust translation to keep image within bounds
+    if (newTranslateX > maxTranslateX) {
+        newTranslateX = maxTranslateX;
+    } else if (newTranslateX < minTranslateX) {
+        newTranslateX = minTranslateX;
+    }
+
+    if (newTranslateY > maxTranslateY) {
+        newTranslateY = maxTranslateY;
+    } else if (newTranslateY < minTranslateY) {
+        newTranslateY = minTranslateY;
+    }
+
+    translateX = newTranslateX;
+    translateY = newTranslateY;
+
+    popupImage.style.transform = `scale(${zoomLevel}) translate(${translateX}px, ${translateY}px)`;
+    console.log('mousemove', translateX, translateY);
+});
+
+document.addEventListener('mouseup', (event) => {
+    if (event.button !== 0) return; // Only allow left mouse button
+    event.stopPropagation();
+
+    if (isDragging) {
+        isDragging = false;
+        popupImage.style.cursor = 'grab';
+        console.log('mouseup', isDragging);
+    }
+});
+
+
 
