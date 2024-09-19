@@ -65,7 +65,7 @@
 
 .timetable__header{
     display: none;
-    grid-template-columns: minmax(12%,0.57fr) 2.55fr clamp(10.063rem,-.823rem + 19.014vw,8.438rem);
+    grid-template-columns: minmax(12%,0.61fr) 2.55fr clamp(14.563rem,-.823rem + 19.014vw,8.438rem);
     padding-inline: 30px;
     padding-block: 8px;
     background-image: linear-gradient(#136eb7,#0e4a8f );
@@ -173,7 +173,9 @@
     display: grid;
 
     }
-
+.timetable-address-grid{
+    display: inline-grid;
+}
     .timetable__hidden-heading{
         display: none;
     }
@@ -188,7 +190,7 @@
     .timetable__schedule-place-list{
         background-color: #ededed;
         display: grid;
-        grid-template-rows: 0.95fr 1.1fr .9fr 1.12fr;
+        grid-template-rows: 48% 30.4% 14.5%;
         li{
             display: flex;
             align-items: center;
