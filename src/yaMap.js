@@ -1,133 +1,112 @@
-window.map = null;
+    window.map = null;
 
-async function initMap() {
-    // Waiting for all api elements to be loaded
-    await ymaps3.ready;
-    const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker, YMapControls, YMapControlButton } = ymaps3;
+    async function initMap() {
+        // Waiting for all api elements to be loaded
+        await ymaps3.ready;
+        const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker, YMapControls, YMapControlButton } = ymaps3;
 
-    // Initialize the map
-    map = new YMap(
-        // Pass the link to the HTMLElement of the container
-        document.getElementById('map'),
-        // Pass the map initialization parameters
-        {
-            location: {
-                center: [131.8883, 43.1155], // Координаты Владивостока
-                zoom: 15
+        // Initialize the map
+        map = new YMap(
+            // Pass the link to the HTMLElement of the container
+            document.getElementById('map'),
+            // Pass the map initialization parameters
+            {
+                location: {
+                    center: [60.597474, 56.838011], // Координаты Екатеринбурга
+                    zoom: 15
+                },
+                mode: 'vector', // Добавляем режим отображения
+                showScaleInCopyrights: true
             },
-            mode: 'vector', // Добавляем режим отображения
-            showScaleInCopyrights: true
-        },
-        [
-            // Add a map scheme layer
-            new YMapDefaultSchemeLayer({
-                customization: [
-                    // Делаем прозрачными все геометрии водных объектов.
-                    {
-                        tags: {
-                            all: [ 'water']
+            [
+                // Add a map scheme layer
+                new YMapDefaultSchemeLayer({
+                    customization: [
+                        // Делаем прозрачными все геометрии водных объектов.
+                        {
+                            tags: {
+                                all: [ 'water']
+                            },
+                            elements: 'geometry',
+                            stylers: [
+                                {
+                                    opacity: .6
+                                }
+                            ]
                         },
-                        elements: 'geometry',
-                        stylers: [
-                            {
-                                opacity: .6
-                            }
-                        ]
-                    },
-                    // Меняем цвет подписей для всех POI и узлов сети общественного транспорта.
-                    {
-                        tags: {
-                            any: ['poi', 'transit_location']
-                        },
-                        elements: 'label.text.fill',
-                        stylers: [
-                            {
-                                color: '#0000DD'
-                            }
-                        ]
-                    }
-                ]
-            }),
-            // Add a layer of geo objects to display the markers
-            new YMapDefaultFeaturesLayer({})
-        ]
-    );
+                        // Меняем цвет подписей для всех POI и узлов сети общественного транспорта.
+                        {
+                            tags: {
+                                any: ['poi', 'transit_location']
+                            },
+                            elements: 'label.text.fill',
+                            stylers: [
+                                {
+                                    color: '#0000DD'
+                                }
+                            ]
+                        }
+                    ]
+                }),
+                // Add a layer of geo objects to display the markers
+                new YMapDefaultFeaturesLayer({})
+            ]
+        );
 
-    // Create buttons for different locations
-    const controls = new YMapControls({ position: 'top left', orientation: 'vertical'});
+        // Create buttons for different locations
+        const controls = new YMapControls({ position: 'top left', orientation: 'vertical'});
 
-    const cities = [
-        { name: 'Отель Экватор', center: [131.877014, 43.115588], zoom: 18 },
-        { name: 'Отель Rodina Residences', center: [131.870824, 43.113449], zoom: 18 },
-        { name: 'Отель Novotel Владивосток', center: [131.903101, 43.127709], zoom: 18 },
-        { name: 'Лотте Отель Владивосток', center: [131.888656, 43.118221], zoom: 18 },
-        { name: 'AZIMUT Сити Отель Владивосток', center: [131.875603, 43.113943], zoom: 18},
-        { name: 'Гостиницы ДВФУ', center: [131.888674, 43.027708], zoom: 18}
-    ];
+        const cities = [
+            { name: 'Общежитие №3 УрФУ', center: [60.757402, 56.770130], zoom: 18 },
+            { name: 'Ramada', center: [60.717382, 56.775575], zoom: 18 },
+            { name: 'Azimut', center: [60.798796, 56.751060], zoom: 18 },
+            { name: 'Cosmos', center: [60.618504, 56.836677], zoom: 18 },
+            { name: 'Novotel', center:[60.611264, 56.833142], zoom: 18},
+            { name: 'Hyatt Regency Ekaterinburg 5*', center: [60.591842,56.842866], zoom: 18},
+            { name: 'Hyatt Place Ekaterinburg 4*', center: [60.575268, 56.835067], zoom: 18},
+        ];
 
-    cities.forEach(city => {
-        const button = new YMapControlButton({
-            text: city.name,
-            onClick: () => {
-                map.setLocation({
-                    center: city.center,
-                    zoom: city.zoom
-                });
-            }
+        cities.forEach(city => {
+            const button = new YMapControlButton({
+                text: city.name,
+                onClick: () => {
+                    map.setLocation({
+                        center: city.center,
+                        zoom: city.zoom
+                    });
+                }
+            });
+            controls.addChild(button);
         });
-        controls.addChild(button);
-    });
 
-    map.addChild(controls);
+        map.addChild(controls);
 
-    // Create markers with a custom icon and add them to the map
-    const markerProps = [
-        { coordinates: [131.877014, 43.115588], iconSrc: 'https://hotelequator.ru/upload/resize_cache/iblock/f6c/121_108_1/6dh43wx2ty5y2emz5je9xhxqm11odb5a.png', url: 'https://hotelequator.ru/' },
-        { coordinates: [131.870824, 43.113449], iconSrc: 'https://rodina-residences.ru/upload/iblock/ba9/ap51gs52gqhk5s0ge845rc21na4ha3iz.svg', url: 'https://rodina-residences.ru/' },
-        { coordinates: [131.903101, 43.127709], iconSrc: 'https://novotel-vladivostok.com/templates/yootheme/cache/Novotel_logo_2019_Blc-00a71183.png', url: 'https://novotel-vladivostok.com/' },
-        { coordinates: [131.888656, 43.118221], iconSrc: 'https://www.lottehotel.com/content/dam/lotte-hotel/lotte/hanoi/main/gnb_logo_hotels.png', url: 'https://lottehotel-vladivostok.ru/' },
-        { coordinates: [131.875603, 43.113943], iconSrc: 'https://azimuthotels.com/images-static/logo_colors.svg', url: 'https://azimuthotels.com/ru/vladivostok/azimut-hotel-vladivostok'},
-        { coordinates: [131.888674, 43.027708], iconSrc: 'https://xn----8sbokcxee2ae3a.xn--p1ai/wp-content/themes/fin/assets/icons-for-main-page/dvfu.svg',  url: 'https://www.dvfu.ru/about/campus/visitors/of/'}
-    ];
+        // Create markers with a custom icon and add them to the map
+        const markerProps = [
+            { coordinates: [60.757402, 56.770130], iconSrc: 'https://urfu.ru/fileadmin/_processed_/d/d/csm_logo1_d783972efb.png', url: 'https://campus.urfu.ru/ru/studencheskii-gorodok/obshchezhitija/obshchezhitija/no-3/' },
+            { coordinates: [60.717382, 56.775575], iconSrc: 'https://ramadayekaterinburg.com/wp-content/uploads/2023/10/Логотип-Ramada_cdr-1024x644.png', url: 'https://ramadayekaterinburg.com/' },
+            { coordinates: [60.798796, 56.751060], iconSrc: 'https://azimuthotels.com/images-static/logo_colors.svg', url: 'https://azimuthotels.com/ru' },
+            { coordinates: [60.618504, 56.836677], iconSrc: 'https://ekaterinburg.cosmosgroup.ru/files/hotels/39_logoFill_1693403596.png', url: 'https://ekaterinburg.cosmosgroup.ru/ru' },
+            { coordinates: [60.611264, 56.833142], iconSrc: 'https://novotel-ekb.ru/assets/front/img/Novotel_logo.svg', url: 'https://novotel-ekb.ru/'},
+            { coordinates: [60.591842,56.842866], iconSrc: 'https://rg-ekaterinburghotel.ru/upload/resize_cache/iblock/09c/490_76_2619711fa078991f0a23d032687646b21/20yp19876mgxxn16zw88skfgb8oeo9n2.webp',  url: 'https://rg-ekaterinburghotel.ru/'},
+            { coordinates: [60.575268, 56.835067], iconSrc: 'https://placeekaterinburg.ru/img/157a79877e8c1858.webp',  url: 'https://placeekaterinburg.ru/'},
+        ];
 
-    markerProps.forEach((markerProp) => {
-        const linkElement = document.createElement('a');
-        linkElement.href = markerProp.url;
-        linkElement.target = '_blank';
+        markerProps.forEach((markerProp) => {
+            const linkElement = document.createElement('a');
+            linkElement.href = markerProp.url;
+            linkElement.target = '_blank';
 
-        const markerElement = document.createElement('img');
-        markerElement.className = 'icon-marker';
-        markerElement.src = markerProp.iconSrc;
-        markerElement.style.height = '75px'; // Высота иконки
-        markerElement.style.cursor = 'pointer'; // Изменение курсора при наведении
-        markerElement.style.objectFit = 'contain'; // Устанавливаем object-fit в contain
-        markerElement.style.backgroundColor = 'black'; // Цвет фона
-        markerElement.style.borderRadius = '5px'; // Скругление углов
-        markerElement.style.padding = '0.5rem'; // Отступы внутри элемента
-        markerElement.style.aspectRatio = '1.5 / 0.9'; // Соотношение сторон
-        markerElement.style.scale = '.6'
-        markerElement.style.animation = 'pulse 2s infinite'; // Применяем анимацию
+            const markerElement = document.createElement('img');
+            markerElement.className = 'icon-marker';
+            markerElement.src = markerProp.iconSrc;
 
 
-// Добавляем стили для анимации
-const style = document.createElement('style');
-style.textContent = `
-@keyframes pulse {
-    0% {
-        transform: scale(.6);
+
+            linkElement.appendChild(markerElement);
+
+            map.addChild(new YMapMarker({ coordinates: markerProp.coordinates }, linkElement));
+        });
     }
-    50% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(.6);
-    }
-}
-`;
-        linkElement.appendChild(markerElement);
 
-        map.addChild(new YMapMarker({ coordinates: markerProp.coordinates }, linkElement));
-    });
-}
-
-initMap();
+    initMap();

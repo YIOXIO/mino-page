@@ -190,7 +190,7 @@
     .timetable__schedule-place-list{
         background-color: #ededed;
         display: grid;
-        grid-template-rows: 48% 30.4% 14.5%;
+        grid-template-rows: 34% 40.3% 17.5%;
         li{
             display: flex;
             align-items: center;

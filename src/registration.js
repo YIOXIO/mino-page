@@ -152,10 +152,6 @@ document.addEventListener('wpcf7mailfailed', function (event) {
       });
     }
 
-
-
-
-
     // Функция для проверки значения и скрытия/показа ul
     function checkRectorSwitch() {
         if (rectorSwitchInput.value.trim().length > 0 || rectorSwitchFioInput.value.trim().length > 0 || rectorSwitchDutyInput.value.trim().length > 0) {

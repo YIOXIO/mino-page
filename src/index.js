@@ -202,145 +202,145 @@ new SlimSelect({
 
 
 
-function openPopup(popupElement) {
-  popupElement.classList.add('popup_is_active');
-  popupElement.addEventListener('click', handleOverlayClosePopup);
-  document.addEventListener('keydown', handleEscClosePopup);
-}
+// function openPopup(popupElement) {
+//   popupElement.classList.add('popup_is_active');
+//   popupElement.addEventListener('click', handleOverlayClosePopup);
+//   document.addEventListener('keydown', handleEscClosePopup);
+// }
 
-function closePopup(popupElement) {
-  popupElement.classList.remove('popup_is_active');
-  popupElement.removeEventListener('click', handleOverlayClosePopup);
-  document.removeEventListener('keydown', handleEscClosePopup);
-}
+// function closePopup(popupElement) {
+//   popupElement.classList.remove('popup_is_active');
+//   popupElement.removeEventListener('click', handleOverlayClosePopup);
+//   document.removeEventListener('keydown', handleEscClosePopup);
+// }
 
-function handleOverlayClosePopup(evt) {
-  if (evt.target === evt.currentTarget) {
-    closePopup(evt.currentTarget);
-  }
-}
+// function handleOverlayClosePopup(evt) {
+//   if (evt.target === evt.currentTarget) {
+//     closePopup(evt.currentTarget);
+//   }
+// }
 
-function handleEscClosePopup(evt) {
-  if (evt.key === 'Escape') {
-    closePopup(document.querySelector('.popup_is_active'));
-  }
-}
+// function handleEscClosePopup(evt) {
+//   if (evt.key === 'Escape') {
+//     closePopup(document.querySelector('.popup_is_active'));
+//   }
+// }
 
-if (buttonClosePopup) {
-  buttonClosePopup.addEventListener('click', () => closePopup(popup));
-}
+// if (buttonClosePopup) {
+//   buttonClosePopup.addEventListener('click', () => closePopup(popup));
+// }
 
-const buttonMapOpenPopup = document.querySelector('.primary-button_map');
+// const buttonMapOpenPopup = document.querySelector('.primary-button_map');
 
-if(buttonMapOpenPopup){
-  buttonMapOpenPopup.addEventListener('click', () => {
-    let mapPopup = document.querySelector('.popup__map')
-    openPopup(mapPopup)
-  })
-} 
+// if(buttonMapOpenPopup){
+//   buttonMapOpenPopup.addEventListener('click', () => {
+//     let mapPopup = document.querySelector('.popup__map')
+//     openPopup(mapPopup)
+//   })
+// } 
 
 
 
-const popupImage = document.querySelector('.popup__image');
+// const popupImage = document.querySelector('.popup__image');
 
-let zoomLevel = 1;
-const zoomStep = 0.1;
+// let zoomLevel = 1;
+// const zoomStep = 0.1;
 
-let isDragging = false;
-let startX, startY;
-let translateX = 0, translateY = 0;
+// let isDragging = false;
+// let startX, startY;
+// let translateX = 0, translateY = 0;
 
-const maxTranslateX = window.innerWidth * 0.2;
-const minTranslateX = -window.innerWidth * 0.2;
-const maxTranslateY = window.innerHeight * 0.2;
-const minTranslateY = -window.innerHeight * 0.2;
+// const maxTranslateX = window.innerWidth * 0.2;
+// const minTranslateX = -window.innerWidth * 0.2;
+// const maxTranslateY = window.innerHeight * 0.2;
+// const minTranslateY = -window.innerHeight * 0.2;
 
-popupImage.style.cursor = 'grab';
-popupImage.style.transform = 'translate(0px, 0px)';
+// popupImage.style.cursor = 'grab';
+// popupImage.style.transform = 'translate(0px, 0px)';
 
-popupImage.addEventListener('wheel', (event) => {
-    event.preventDefault();
-    event.stopPropagation();
+// popupImage.addEventListener('wheel', (event) => {
+//     event.preventDefault();
+//     event.stopPropagation();
 
-    if (event.deltaY < 0) {
-        // Scroll up - zoom in
-        zoomLevel += zoomStep;
-    } else {
-        // Scroll down - zoom out
-        zoomLevel -= zoomStep;
-        if (zoomLevel < 1) zoomLevel = 1; // Prevent zooming out below original size
-    }
+//     if (event.deltaY < 0) {
+//         // Scroll up - zoom in
+//         zoomLevel += zoomStep;
+//     } else {
+//         // Scroll down - zoom out
+//         zoomLevel -= zoomStep;
+//         if (zoomLevel < 1) zoomLevel = 1; // Prevent zooming out below original size
+//     }
 
-    // Adjust translation to keep image within bounds
-    let newTranslateX = translateX;
-    let newTranslateY = translateY;
+//     // Adjust translation to keep image within bounds
+//     let newTranslateX = translateX;
+//     let newTranslateY = translateY;
 
-    if (translateX > maxTranslateX) {
-        newTranslateX = maxTranslateX;
-    } else if (translateX < minTranslateX) {
-        newTranslateX = minTranslateX;
-    }
+//     if (translateX > maxTranslateX) {
+//         newTranslateX = maxTranslateX;
+//     } else if (translateX < minTranslateX) {
+//         newTranslateX = minTranslateX;
+//     }
 
-    if (translateY > maxTranslateY) {
-        newTranslateY = maxTranslateY;
-    } else if (translateY < minTranslateY) {
-        newTranslateY = minTranslateY;
-    }
+//     if (translateY > maxTranslateY) {
+//         newTranslateY = maxTranslateY;
+//     } else if (translateY < minTranslateY) {
+//         newTranslateY = minTranslateY;
+//     }
 
-    popupImage.style.transform = `scale(${zoomLevel}) translate(${newTranslateX}px, ${newTranslateY}px)`;
-});
+//     popupImage.style.transform = `scale(${zoomLevel}) translate(${newTranslateX}px, ${newTranslateY}px)`;
+// });
 
-popupImage.addEventListener('mousedown', (event) => {
-    if (event.button !== 0) return; // Only allow left mouse button
-    event.stopPropagation();
+// popupImage.addEventListener('mousedown', (event) => {
+//     if (event.button !== 0) return; // Only allow left mouse button
+//     event.stopPropagation();
 
-    isDragging = true;
-    startX = event.clientX - translateX;
-    startY = event.clientY - translateY;
-    popupImage.style.cursor = 'grabbing';
-    console.log('mousedown', isDragging, startX, startY);
-});
+//     isDragging = true;
+//     startX = event.clientX - translateX;
+//     startY = event.clientY - translateY;
+//     popupImage.style.cursor = 'grabbing';
+//     console.log('mousedown', isDragging, startX, startY);
+// });
 
-popupImage.addEventListener('mousemove', (event) => {
-    if (!isDragging) return;
-    event.stopPropagation();
+// popupImage.addEventListener('mousemove', (event) => {
+//     if (!isDragging) return;
+//     event.stopPropagation();
 
-    const dx = event.clientX - startX;
-    const dy = event.clientY - startY;
+//     const dx = event.clientX - startX;
+//     const dy = event.clientY - startY;
 
-    let newTranslateX = dx;
-    let newTranslateY = dy;
+//     let newTranslateX = dx;
+//     let newTranslateY = dy;
 
-    // Adjust translation to keep image within bounds
-    if (newTranslateX > maxTranslateX) {
-        newTranslateX = maxTranslateX;
-    } else if (newTranslateX < minTranslateX) {
-        newTranslateX = minTranslateX;
-    }
+//     // Adjust translation to keep image within bounds
+//     if (newTranslateX > maxTranslateX) {
+//         newTranslateX = maxTranslateX;
+//     } else if (newTranslateX < minTranslateX) {
+//         newTranslateX = minTranslateX;
+//     }
 
-    if (newTranslateY > maxTranslateY) {
-        newTranslateY = maxTranslateY;
-    } else if (newTranslateY < minTranslateY) {
-        newTranslateY = minTranslateY;
-    }
+//     if (newTranslateY > maxTranslateY) {
+//         newTranslateY = maxTranslateY;
+//     } else if (newTranslateY < minTranslateY) {
+//         newTranslateY = minTranslateY;
+//     }
 
-    translateX = newTranslateX;
-    translateY = newTranslateY;
+//     translateX = newTranslateX;
+//     translateY = newTranslateY;
 
-    popupImage.style.transform = `scale(${zoomLevel}) translate(${translateX}px, ${translateY}px)`;
-    console.log('mousemove', translateX, translateY);
-});
+//     popupImage.style.transform = `scale(${zoomLevel}) translate(${translateX}px, ${translateY}px)`;
+//     console.log('mousemove', translateX, translateY);
+// });
 
-document.addEventListener('mouseup', (event) => {
-    if (event.button !== 0) return; // Only allow left mouse button
-    event.stopPropagation();
+// document.addEventListener('mouseup', (event) => {
+//     if (event.button !== 0) return; // Only allow left mouse button
+//     event.stopPropagation();
 
-    if (isDragging) {
-        isDragging = false;
-        popupImage.style.cursor = 'grab';
-        console.log('mouseup', isDragging);
-    }
-});
+//     if (isDragging) {
+//         isDragging = false;
+//         popupImage.style.cursor = 'grab';
+//         console.log('mouseup', isDragging);
+//     }
+// });
 
 
 
